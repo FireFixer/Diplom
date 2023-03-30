@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru" class="ih-100" data-bs-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Операторы присваивания</title>
+</head>
+<body class="d-flex flex-column ih-100"> 
+	<header class="container-fluid text-light beta mb-2 border-bottom">
+		<div class="navbar navbar-expand-md navbar-light">
+		  <div class="container-fluid">
+			<div class="nav-item me-3"> 
+			  <a href="front.html" class="text-decoration-none">
+				<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-house-door-fill text-reset" viewBox="0 0 16 16">
+				  <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z"/>
+				</svg>
+			  </a>            
+			</div>
+			<div class="collapse navbar-collapse">
+			  <ul class="navbar-nav me-auto">
+				<li class="nav-item dropdown me-2">
+				  <a aria-expanded="false" aria-haspopup="true" class="nav-link text-light dropdown-toggle" data-bs-toggle="dropdown" href="#">Курсы</a>
+				  <ul class="dropdown-menu dropdown-menu-columns dropdown-menu-arrow">
+					<li><a class="dropdown-item" href="frontjs.html"><span>JavaScript</span></a></li>
+					<li><a class="dropdown-item" href="frontpython.html"><span>Python</span></a></li>
+				  </ul>
+				</li>
+				<a href="about.html" class="nav-link text-light">О проекте</a>
+			  </ul>
+			  <div class="form-check form-switch">
+				<input class="form-check-input" type="checkbox" id="darkSwitch">
+				<label class="form-check-label" for="darkSwitch">Light</label>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		</header>
+	<main class="container-fluid overflow-hidden ih-100 mb-1">
+		<div class="row ih-100 g-2">
+			<div class="col-12 ih-100 col-lg-2 col-md-2 mb-3 mb-md-0 position-relative">
+				<div class="d-flex flex-column ih-100 align-items-stretch flex-shrink-0">
+					<a href="./frontjs.html" class="d-flex flex-shrink-0 p-3 link-dark text-decoration-none border align-items-center justify-content-center">
+						<span class="switchmode fs-5 fw-semibold text-light">Навигация</span>
+					  </a>					  
+					<ol class="list-group list-group-numbered rounded-0 overflow-auto">
+						<li class="list-group-item border-top-0"><a href="jslesson1.html">Объявление переменных</a></li>
+						<li class="list-group-item"><a href="jslesson2.html">Присвоение значений переменным</a></li>
+						<li class="list-group-item"><a href="jslesson3.html">Именование переменных</a></li>
+						<li class="list-group-item"><a href="jslesson4.html">Типы данных</a></li>
+						<li class="list-group-item"><a href="jslesson5.html">Арифметические операторы</a></li>
+						<li class="list-group-item"><a href="jslesson6.html">Операторы сравнения</a></li>
+						<li class="list-group-item"><a href="jslesson7.html">Логические операторы</a></li>
+						<li class="list-group-item">Операторы присваивания</li>
+						<li class="list-group-item"><a href="jslesson9.html">Операторы инкремента и декремента</a></li>
+						<li class="list-group-item"><a href="jslesson10.html">Конкатенация</a></li>
+						<li class="list-group-item"><a href="jslesson11.html">Оператор if</a></li>
+						<li class="list-group-item"><a href="jslesson12.html">Оператор switch</a></li>
+						<li class="list-group-item"><a href="jslesson13.html">Тернарный оператор</a></li>
+						<li class="list-group-item"><a href="jslesson14.html">Цикл for</a></li>
+						<li class="list-group-item"><a href="jslesson15.html">Цикл for...in</a></li>
+						<li class="list-group-item"><a href="jslesson16.html">Цикл for...of</a></li>
+						<li class="list-group-item"><a href="jslesson17.html">Цикл while</a></li>
+						<li class="list-group-item"><a href="jslesson18.html">Цикл do...while</a></li>
+						<li class="list-group-item"><a href="jslesson19.html">Обычные функции</a></li>
+						<li class="list-group-item"><a href="jslesson20.html">Стрелочные функции</a></li>
+						<li class="list-group-item"><a href="jslesson21.html">Создание массивов</a></li>
+						<li class="list-group-item"><a href="jslesson22.html">Методы массивов</a></li>
+						<li class="list-group-item"><a href="jslesson23.html">Объекты</a></li>
+					  </ol>
+				</div>
+		  		</div>
+				<div class="col-12 ih-100 col-lg-5 col-md-5 mb-3 mb-md-0 position-relative">
+					<div class="card rounded-0 ih-100 switchmode text-light">
+						<div class="nav nav-tabs justify-content-center small">
+						  <div class="nav-link active border-top-0 rounded-0 border-bottom">Урок</div>
+						</div>
+					  <div class="tab-content overflow-hidden ih-100">
+						<div class="tab-pane fade overflow-auto active show ih-100">
+						  <div class="card border-0">
+							<div class="card-body">
+								<div class="content">
+								  <h1 class="h3 font-weight-bold">Операторы присваивания</h1>
+								  <p>Операторы присваивания используются в JavaScript для присвоения значений переменным. Существует несколько типов операторов присваивания, включая простой оператор присваивания (=), оператор присваивания сложения (+=), оператор присваивания вычитания (-=), оператор присваивания умножения (*=), оператор присваивания деления (/ =), оператор присваивания остатка (%=), оператор присваивания возведения в степень (**=), оператор присваивания побитового И (&=), оператор присваивания побитовое ИЛИ (|=) и оператор присваивания побитовое исключающее ИЛИ (^ "="</p>
+								  <p>Простой оператор присваивания (=) присваивает значение в правой части оператора переменной в левой части.</p>
+									<div class="container border mb-3">
+								  	<code class="language-js " data-lang="js">
+										<span class="d-block text-break my-2">х = 10;//присваивает значение 10 переменной x</span>
+
+									</code>
+									</div>
+								  <p>Оператор присваивания сложения (+=) добавляет значение в правой части оператора к существующему значению переменной в левой части.</p>
+								  <div class="container border mb-3">
+									<code class="language-js " data-lang="js">
+									  <span class="d-block text-break my-2">х += 5;//добавляет 5 к существующему значению x</span>
+								  </code>
+								  </div>
+								  <p>Оператор присваивания вычитания (-=) вычитает значение в правой части оператора из существующего значения переменной в левой части.</p>
+								  <div class="container border mb-3">
+									<code class="language-js " data-lang="js">
+									  <span class="d-block text-break my-2">х -= 5;//вычитает 5 из существующего значения x</span>
+								  </code>
+								  </div>
+								  <p>Оператор присваивания умножения (*=) умножает существующее значение переменной в левой части на значение в правой части оператора.</p>
+								  <div class="container border mb-3">
+									<code class="language-js " data-lang="js">
+									  <span class="d-block text-break my-2">х *= 2;//умножает существующее значение x на 2</span>
+								  </code>
+								  </div>
+								  <p>Оператор присваивания деления (/=) делит существующее значение переменной в левой части на значение в правой части оператора.</p>
+								  <div class="container border mb-3">
+									<code class="language-js " data-lang="js">
+									  <span class="d-block text-break my-2">х /= 2;//делит существующее значение x на 2</span>
+								  </code>
+								  </div>
+								  <p>Оператор присваивания остатка (%=) присваивает остаток от деления существующего значения переменной в левой части на значение в правой части оператора.</p>
+								  <div class="container border mb-3">
+									<code class="language-js " data-lang="js">
+									  <span class="d-block text-break my-2">х %= 3;//присваивает остаток от деления x на 3 на x</span>
+								  </code>
+								  </div>
+								  <h1 class="h4 font-weight-bold">Практические задания</h1>
+								  <p>1)	Создать переменную и присвоить ей значение. Используя оператор присваивания, добавить к переменной число и вывести результат в консоль.</p>
+								  <p>2) Создать переменную и присвоить ей значение. Используя оператор присваивания, умножить переменную на число и вывести результат в консоль.</p>
+								  <p>3) Создать переменную и присвоить ей значение. Используя оператор присваивания, выполнить операцию деления переменной на число и вывести результат в консоль.</p>
+								  <p>4) Создать переменную и присвоить ей значение. Используя оператор присваивания, выполнить операцию остатка от деления переменной на число и вывести результат в консоль.</p>
+								  <div class="my-4">
+									  <details class="mt-1 border">
+										<summary class="p-2">Решение задач</summary>
+										<div class="px-2 pt-2">
+										<p>1)</p>
+										<div class="container border mb-3">
+											<code class="language-js " data-lang="js">
+											  <span class="d-block text-break my-2">let num = 5;</span>
+											  <span class="d-block text-break my-2">num += 3;</span>
+											  <span class="d-block text-break my-2">console.log(num); // 8</span>
+										  </code>
+										  </div>
+										  <p>2)</p>
+										  <div class="container border mb-3">
+											<code class="language-js " data-lang="js">
+											  <span class="d-block text-break my-2">let num = 5;</span>
+											  <span class="d-block text-break my-2">num *= 3;</span>
+											  <span class="d-block text-break my-2">console.log(num); // 15</span>
+										  </code>
+										  </div>
+										  <p>3)</p>
+										  <div class="container border mb-3">
+											<code class="language-js " data-lang="js">
+											  <span class="d-block text-break my-2">let num = 10;</span>
+											  <span class="d-block text-break my-2">num /= 2;</span>
+											  <span class="d-block text-break my-2">console.log(num); // 5</span>
+										  </code>
+										  </div>
+										  <p>4)</p>
+										  <div class="container border mb-3">
+											<code class="language-js " data-lang="js">
+											  <span class="d-block text-break my-2">let num = 10;</span>
+											  <span class="d-block text-break my-2">num %= 3;</span>
+											  <span class="d-block text-break my-2">console.log(num); // 1</span>
+										  </code>
+										  </div>
+										</div>
+									  </details>
+									<details class="mt-1 border">
+									  <summary class="p-2">Дополнительные материалы</summary>
+									  <div class="px-2 pt-2">
+										<p><a href=https://learn.javascript.ru>Учебник JavaScript</a></p>
+									  </div>
+									</details>
+								  </div>
+								  <div class="mb-3 d-flex justify-content-center">
+									<div class="me-4">
+										<a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="jslesson7.html"><span class="me-2">←</span><span>Предыдущий</span></a>
+									</div>
+									<a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="jslesson9.html"><span class="me-2">Следующий</span><span>→</span></a>
+								</div>
+								</div>
+							</div>
+						  </div>
+						</div>
+						</div>
+					  </div>
+					</div>
+			<div class="col-12 ih-100 col-lg-5 col-md-5 mb-3 mb-md-0 position-relative">
+				<div class="card mb-2 rounded-0 ih-70">
+					<div class="justify-content-center small nav nav-tabs">
+					  <div class="switchmode border-top-0 border-bottom text-light rounded-0 nav-link active">Компилятор</div>
+					</div>
+				<textarea class="form-control border-0 outline-0 h-100 text-primary" id="code-input"></textarea>
+			  <div class="d-flex p-3 border-top">
+				<div class="m-auto">
+					  <button id="compile-btn" type="button" class="me-3 d-inline-flex align-items-center btn btn-success ms-3">
+						<span class="d-none d-sm-block d-md-none d-lg-block">Выполнить</span>
+					  </button>
+					  </div>
+					</div>
+				  </div>
+				  <div class="card overflow-auto rounded-0 ih-30">
+					<div class="justify-content-center small nav nav-tabs">
+					  <div class="switchmode border-top-0 border-bottom text-light rounded-0 nav-link active">Консоль</div>
+					</div> 
+					<div class="card-body text-danger" id="output"></div>
+				  </div>
+            </div>
+
+        </div>
+    </main>
+
+	<script src="main.bundle.js"></script>
+	<script src="jscompiler.bundle.js"></script>  
+</body>
+</html>

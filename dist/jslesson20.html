@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Цикл for...in</title>
+    <title>Стрелочные функции</title>
 </head>
 <body class="d-flex flex-column ih-100"> 
 	<header class="container-fluid text-light beta mb-2 border-bottom">
@@ -57,12 +57,12 @@
 						<li class="list-group-item"><a href="jslesson12.html">Оператор switch</a></li>
 						<li class="list-group-item"><a href="jslesson13.html">Тернарный оператор</a></li>
 						<li class="list-group-item"><a href="jslesson14.html">Цикл for</a></li>
-						<li class="list-group-item">Цикл for...in</li>
+						<li class="list-group-item"><a href="jslesson15.html">Цикл for...in</a></li>
 						<li class="list-group-item"><a href="jslesson16.html">Цикл for...of</a></li>
 						<li class="list-group-item"><a href="jslesson17.html">Цикл while</a></li>
 						<li class="list-group-item"><a href="jslesson18.html">Цикл do...while</a></li>
 						<li class="list-group-item"><a href="jslesson19.html">Обычные функции</a></li>
-						<li class="list-group-item"><a href="jslesson20.html">Стрелочные функции</a></li>
+						<li class="list-group-item">Стрелочные функции</li>
 						<li class="list-group-item"><a href="jslesson21.html">Создание массивов</a></li>
 						<li class="list-group-item"><a href="jslesson22.html">Методы массивов</a></li>
 						<li class="list-group-item"><a href="jslesson23.html">Объекты</a></li>
@@ -79,49 +79,34 @@
 						  <div class="card border-0">
 							<div class="card-body">
 								<div class="content">
-								  <h1 class="h3 font-weight-bold">Цикл for...in</h1>
-								  <p>Цикл "for...in" в JavaScript используется для перебора свойств объекта. Он позволяет перебрать все свойства объекта в произвольном порядке.</p>
-								  <p>Синтаксис цикла "for...in" выглядит следующим образом:</p>
+								  <h1 class="h3 font-weight-bold">Стрелочные функции</h1>
+								  <p>Стрелочные функции были представлены в ES6 как более лаконичный способ написания функций на JavaScript. Их также называют функциями «толстой стрелки» из-за синтаксиса, который использует двойную стрелку (=>) для определения функции. Стрелочные функции имеют несколько ключевых отличий от традиционных функций JavaScript. Во-первых, они всегда анонимны, то есть у них нет имени. Во-вторых, у них нет собственной привязки this, поэтому они всегда наследуют это значение из окружающего контекста. В-третьих, их нельзя использовать в качестве конструкторов, поэтому их нельзя использовать с ключевым словом new.</p>
+								  <p>Основной синтаксис стрелочной функции следующий:</p>
 								  <div class="container border mb-3">
 									<code class="language-js " data-lang="js">
-										<span class="d-block text-break my-2">for (variable in object) {</span>
-										<span class="d-block text-break my-2">// Блок кода</span>
-										<span class="d-block text-break my-2">}</span>
+										<span class="d-block text-break my-2">(parameter1, parameter2, ...) => {</span>
+										<span class="d-block text-break my-2">// тело функции</span>
+										<span class="d-block text-break my-2">};</span>
 									</code>
 									</div>
-								  <p>Здесь "variable" - это имя переменной, которая будет содержать имя каждого свойства объекта по мере перебора, а "object" - это объект, свойства которого будут перебираться. Блок кода, заключенный в фигурные скобки, будет выполняться каждый раз, когда новое свойство будет обнаружено.</p>
-								  <p>Пример использования цикла "for...in":</p>
+								  <p>Если тело функции состоит из одного выражения, фигурные скобки и оператор return можно опустить, что приведет к еще более лаконичному синтаксису:</p>
 								  <div class="container border mb-3">
 									<code class="language-js " data-lang="js">
-										<span class="d-block text-break my-2">// Задача: вывести все свойства объекта</span>
-										<span class="d-block text-break my-2">let obj = {name: "John", age: 30, city: "New York"};</span>
-										<span class="d-block text-break my-2">for (let prop in obj) {</span>
-										<span class="d-block text-break my-2">console.log(prop + ": " + obj[prop]);</span>
-										<span class="d-block text-break my-2">}</span>
+										<span class="d-block text-break my-2">(parameter1, parameter2, ...) => expression;</span>
 									</code>
 									</div>
-								  <p>В этом примере мы используем цикл "for...in", чтобы перебрать все свойства объекта "obj" и вывести их значения. Мы создаем переменную "prop" и перебираем каждое свойство объекта "obj". В блоке кода мы выводим имя свойства и его значение в консоль.</p>
-								  <p>Можно использовать цикл "for...in" для выполнения различных операций со свойствами объекта, таких как удаление, изменение или добавление свойств.</p>
-								  <p>Пример практического задания с использованием цикла "for...in":</p>
+								  <p>Вот пример стрелочной функции, которая принимает два параметра и возвращает их сумму:</p>
 								  <div class="container border mb-3">
 									<code class="language-js " data-lang="js">
-										<span class="d-block text-break my-2">// Задача: Вычислить количество свойств объекта</span>
-										<span class="d-block text-break my-2">let obj = {name: "John", age: 30, city: "New York"};</span>
-										<span class="d-block text-break my-2">let count = 0;</span>
-										<span class="d-block text-break my-2">for (let prop in obj) {</span>
-										<span class="d-block text-break my-2">count++;</span>
-										<span class="d-block text-break my-2">}</span>
-										<span class="d-block text-break my-2">console.log(count); // Ожидаемый результат: 3</span>
+										<span class="d-block text-break my-2">const sum = (a, b) => a + b;</span>
+										<span class="d-block text-break my-2">console.log(sum(2, 3)); // Output: 5</span>
 									</code>
 									</div>
-								  <p>В данном примере мы создаем объект obj, который содержит три свойства. Затем мы создаем переменную count, которую будем использовать для подсчета количества свойств объекта.</p>
-								  <p>Далее, мы используем цикл for...in, чтобы перебрать каждое свойство объекта и увеличить значение переменной count на 1 для каждого свойства.</p>
-								  <p>Наконец, мы выводим значение переменной count в консоль, чтобы получить количество свойств объекта. В данном случае ожидаемый результат - 3.</p>
 								  <h1 class="h4 font-weight-bold">Практические задания</h1>
-								  <p>1)	Используя цикл for...in, напишите код, который будет выводить в консоль все индексы и значения элементов массива ["apple", "banana", "orange"].</p>
-								  <p>2) Используя цикл for...in, напишите код, который будет выводить в консоль только четные индексы и значения элементов массива [1, 2, 3, 4, 5, 6].</p>
-								  <p>3) Используя цикл for...in, напишите код, который будет выводить в консоль все индексы и значения элементов строки "hello".</p>
-								  <p>4) Используя цикл for...in, напишите код, который будет выводить в консоль все ключи и значения из объекта {a: 1, b: 2, c: 3} в обратном порядке.</p>
+								  <p>1)	Напишите функцию, которая принимает два числа и возвращает true, если первое число больше второго, и false, если наоборот, используя стрелочную функцию.</p>
+								  <p>2) Напишите функцию, которая принимает строку и возвращает ее длину, используя стрелочную функцию.</p>
+								  <p>3) Напишите функцию, которая принимает число и возвращает true, если оно четное, и false, если нечетное, используя стрелочную функцию.</p>
+								  <p>4) Напишите функцию, которая принимает число и возвращает его квадрат, используя стрелочную функцию.</p>
 								  <div class="my-4">
 									  <details class="mt-1 border">
 										<summary class="p-2">Решение задач</summary>
@@ -129,39 +114,33 @@
 										<p>1)</p>
 										<div class="container border mb-3">
 											<code class="language-js " data-lang="js">
-												<span class="d-block text-break my-2">let arr = ["apple", "banana", "orange"];</span>
-												<span class="d-block text-break my-2">for (let index in arr) {</span>
-												<span class="d-block text-break my-2">console.log(index + ": " + arr[index]);</span>
-												<span class="d-block text-break my-2">}</span>
+												<span class="d-block text-break my-2">const isGreater = (a, b) => a > b;</span>
+												<span class="d-block text-break my-2">console.log(isGreater(5, 2)); // true</span>
+												<span class="d-block text-break my-2">console.log(isGreater(10, 15)); // false</span>
 										  </code>
 										  </div>
 										  <p>2)</p>
 										  <div class="container border mb-3">
 											<code class="language-js " data-lang="js">
-												<span class="d-block text-break my-2">let arr = [1, 2, 3, 4, 5, 6];</span>
-												<span class="d-block text-break my-2">for (let index in arr) {</span>
-												<span class="d-block text-break my-2">if (index % 2 === 0) {</span>
-												<span class="d-block text-break my-2">console.log(index + ": " + arr[index]);</span>
-												<span class="d-block text-break my-2">}</span>
-												<span class="d-block text-break my-2">}</span>
+												<span class="d-block text-break my-2">const stringLength = (str) => str.length;</span>
+												<span class="d-block text-break my-2">console.log(stringLength('hello')); // 5</span>
+												<span class="d-block text-break my-2">console.log(stringLength('world!')); // 6</span>
 										  </code>
 										  </div>
 										  <p>3)</p>
 										  <div class="container border mb-3">
 											<code class="language-js " data-lang="js">
-												<span class="d-block text-break my-2">let str = "hello";</span>
-												<span class="d-block text-break my-2">for (let index in str) {</span>
-												<span class="d-block text-break my-2">console.log(index + ": " + str[index]);</span>
-												<span class="d-block text-break my-2">}</span>
+												<span class="d-block text-break my-2">const isEven = (num) => num % 2 === 0;</span>
+												<span class="d-block text-break my-2">console.log(isEven(2)); // true</span>
+												<span class="d-block text-break my-2">console.log(isEven(3)); // false</span>
 										  </code>
 										  </div>
 										  <p>4)</p>
 										  <div class="container border mb-3">
 											<code class="language-js " data-lang="js">
-												<span class="d-block text-break my-2">let obj = {a: 1, b: 2, c: 3};</span>
-												<span class="d-block text-break my-2">for (let key in obj) {</span>
-												<span class="d-block text-break my-2">console.log(key + ": " + obj[key]);</span>
-												<span class="d-block text-break my-2">}</span>
+												<span class="d-block text-break my-2">const square = (num) => num * num;</span>
+												<span class="d-block text-break my-2">console.log(square(5)); // 25</span>
+												<span class="d-block text-break my-2">console.log(square(3)); // 9</span>
 										  </code>
 										  </div>
 										</div>
@@ -175,9 +154,9 @@
 								  </div>
 								  <div class="mb-3 d-flex justify-content-center">
 									<div class="me-4">
-										<a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="jslesson14.html"><span class="me-2">←</span><span>Предыдущий</span></a>
+										<a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="jslesson19.html"><span class="me-2">←</span><span>Предыдущий</span></a>
 									</div>
-									<a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="jslesson16.html"><span class="me-2">Следующий</span><span>→</span></a>
+									<a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="jslesson21.html"><span class="me-2">Следующий</span><span>→</span></a>
 								</div>
 								</div>
 							</div>

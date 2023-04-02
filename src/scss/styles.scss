@@ -18,16 +18,3 @@ textarea:focus {
 .ih-30 {
   height: 24.04%;
 }
-@media (max-width: 768px) {
-	#compile-btn {
-		font-size: 14px;
-		padding: 4px 8px;
-	}
-}
-
-@media (max-width: 576px) {
-	#compile-btn {
-		font-size: 12px;
-		padding: 3px 6px;
-	}
-}

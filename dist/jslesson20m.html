@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Цикл for...in</title>
+    <title>Математические функции</title>
 	<link type="Image/x-icon" href="images/icon.ico" rel="icon">
 </head>
 <body class="d-flex flex-column ih-100"> 
@@ -58,13 +58,13 @@
 						<li class="list-group-item"><a href="jslesson12.html">Оператор switch</a></li>
 						<li class="list-group-item"><a href="jslesson13.html">Тернарный оператор</a></li>
 						<li class="list-group-item"><a href="jslesson14.html">Цикл for</a></li>
-						<li class="list-group-item">Цикл for...in</li>
+						<li class="list-group-item"><a href="jslesson15.html">Цикл for...in</a></li>
 						<li class="list-group-item"><a href="jslesson16.html">Цикл for...of</a></li>
 						<li class="list-group-item"><a href="jslesson17.html">Цикл while</a></li>
 						<li class="list-group-item"><a href="jslesson18.html">Цикл do...while</a></li>
 						<li class="list-group-item"><a href="jslesson19.html">Обычные функции</a></li>
 						<li class="list-group-item"><a href="jslesson20.html">Стрелочные функции</a></li>
-						<li class="list-group-item"><a href="jslesson20m.html">Математические функции</a></li>
+						<li class="list-group-item">Математические функции</li>
 						<li class="list-group-item"><a href="jslesson21.html">Создание массивов</a></li>
 						<li class="list-group-item"><a href="jslesson22.html">Методы массивов</a></li>
 						<li class="list-group-item"><a href="jslesson23.html">Объекты</a></li>
@@ -81,49 +81,71 @@
 						  <div class="card border-0">
 							<div class="card-body">
 								<div class="content">
-								  <h1 class="h3 font-weight-bold">Цикл for...in</h1>
-								  <p>Цикл "for...in" в JavaScript используется для перебора свойств объекта. Он позволяет перебрать все свойства объекта в произвольном порядке.</p>
-								  <p>Синтаксис цикла "for...in" выглядит следующим образом:</p>
+								  <h1 class="h3 font-weight-bold">Математические функции</h1>
+								  <p>Математические функции в JavaScript позволяют осуществлять различные математические операции над числами. В языке JavaScript предусмотрено множество встроенных математических функций, которые можно использовать в своих программах. Рассмотрим некоторые из них.</p>
+								  <p>Math.abs(x) - возвращает абсолютное значение числа x. Например:</p>
 								  <div class="container border mb-3">
 									<code class="language-js " data-lang="js">
-										<span class="d-block text-break my-2">for (variable in object) {</span>
-										<span class="d-block text-break my-2">// Блок кода</span>
-										<span class="d-block text-break my-2">}</span>
+										<span class="d-block text-break my-2">Math.abs(-5); // вернет 5</span>
+										<span class="d-block text-break my-2">Math.abs(5); // вернет 5</span>
 									</code>
 									</div>
-								  <p>Здесь "variable" - это имя переменной, которая будет содержать имя каждого свойства объекта по мере перебора, а "object" - это объект, свойства которого будут перебираться. Блок кода, заключенный в фигурные скобки, будет выполняться каждый раз, когда новое свойство будет обнаружено.</p>
-								  <p>Пример использования цикла "for...in":</p>
+								  <p>Math.ceil(x) - округляет число x до ближайшего большего целого. Например:</p>
 								  <div class="container border mb-3">
 									<code class="language-js " data-lang="js">
-										<span class="d-block text-break my-2">// Задача: вывести все свойства объекта</span>
-										<span class="d-block text-break my-2">let obj = {name: "John", age: 30, city: "New York"};</span>
-										<span class="d-block text-break my-2">for (let prop in obj) {</span>
-										<span class="d-block text-break my-2">console.log(prop + ": " + obj[prop]);</span>
-										<span class="d-block text-break my-2">}</span>
+										<span class="d-block text-break my-2">Math.ceil(4.2); // вернет 5</span>
+										<span class="d-block text-break my-2">Math.ceil(-4.2); // вернет -4</span>
 									</code>
 									</div>
-								  <p>В этом примере мы используем цикл "for...in", чтобы перебрать все свойства объекта "obj" и вывести их значения. Мы создаем переменную "prop" и перебираем каждое свойство объекта "obj". В блоке кода мы выводим имя свойства и его значение в консоль.</p>
-								  <p>Можно использовать цикл "for...in" для выполнения различных операций со свойствами объекта, таких как удаление, изменение или добавление свойств.</p>
-								  <p>Пример практического задания с использованием цикла "for...in":</p>
+								  <p>Math.floor(x) - округляет число x до ближайшего меньшего целого. Например:</p>
 								  <div class="container border mb-3">
 									<code class="language-js " data-lang="js">
-										<span class="d-block text-break my-2">// Задача: Вычислить количество свойств объекта</span>
-										<span class="d-block text-break my-2">let obj = {name: "John", age: 30, city: "New York"};</span>
-										<span class="d-block text-break my-2">let count = 0;</span>
-										<span class="d-block text-break my-2">for (let prop in obj) {</span>
-										<span class="d-block text-break my-2">count++;</span>
-										<span class="d-block text-break my-2">}</span>
-										<span class="d-block text-break my-2">console.log(count); // Ожидаемый результат: 3</span>
+										<span class="d-block text-break my-2">Math.floor(4.2); // вернет 4</span>
+										<span class="d-block text-break my-2">Math.floor(-4.2); // вернет -5</span>
 									</code>
 									</div>
-								  <p>В данном примере мы создаем объект obj, который содержит три свойства. Затем мы создаем переменную count, которую будем использовать для подсчета количества свойств объекта.</p>
-								  <p>Далее, мы используем цикл for...in, чтобы перебрать каждое свойство объекта и увеличить значение переменной count на 1 для каждого свойства.</p>
-								  <p>Наконец, мы выводим значение переменной count в консоль, чтобы получить количество свойств объекта. В данном случае ожидаемый результат - 3.</p>
+								  <p>Math.max(x1, x2, ..., xn) - возвращает наибольшее число из x1, x2, ..., xn. Например:</p>
+								  <div class="container border mb-3">
+									<code class="language-js " data-lang="js">
+										<span class="d-block text-break my-2">Math.max(10, 20, 30); // вернет 30</span>
+									</code>
+									</div>
+									<p>Math.min(x1, x2, ..., xn) - возвращает наименьшее число из x1, x2, ..., xn. Например:</p>
+								  <div class="container border mb-3">
+									<code class="language-js " data-lang="js">
+										<span class="d-block text-break my-2">Math.min(10, 20, 30); // вернет 10</span>
+									</code>
+									</div>
+									<p>Math.pow(x, y) - возвращает значение x в степени y. Например:</p>
+									<div class="container border mb-3">
+									  <code class="language-js " data-lang="js">
+										  <span class="d-block text-break my-2">Math.pow(2, 3); // вернет 8</span>
+									  </code>
+									  </div>
+									<p>Math.random() - возвращает случайное число от 0 до 1. Например:</p>
+								  <div class="container border mb-3">
+									<code class="language-js " data-lang="js">
+										<span class="d-block text-break my-2">Math.random(); // вернет случайное число от 0 до 1</span>
+									</code>
+									</div>
+									<p>Math.round(x) - округляет число x до ближайшего целого. Например:</p>
+									<div class="container border mb-3">
+									  <code class="language-js " data-lang="js">
+										  <span class="d-block text-break my-2">Math.round(4.2); // вернет 4</span>
+										  <span class="d-block text-break my-2">Math.round(4.7); // вернет 5</span>
+									  </code>
+									  </div>
+									<p>Math.sqrt(x) - возвращает квадратный корень числа x. Например:</p>
+								  <div class="container border mb-3">
+									<code class="language-js " data-lang="js">
+										<span class="d-block text-break my-2">Math.sqrt(16); // вернет 4</span>
+									</code>
+									</div>
 								  <h1 class="h4 font-weight-bold">Практические задания</h1>
-								  <p>1)	Используя цикл for...in, напишите код, который будет выводить в консоль все индексы и значения элементов массива ["apple", "banana", "orange"].</p>
-								  <p>2) Используя цикл for...in, напишите код, который будет выводить в консоль только четные индексы и значения элементов массива [1, 2, 3, 4, 5, 6].</p>
-								  <p>3) Используя цикл for...in, напишите код, который будет выводить в консоль все индексы и значения элементов строки "hello".</p>
-								  <p>4) Используя цикл for...in, напишите код, который будет выводить в консоль все ключи и значения из объекта {a: 1, b: 2, c: 3} в обратном порядке.</p>
+								  <p>1)	Напишите функцию, которая вычисляет площадь треугольника по формуле (0.5 * a * h) и возвращает результат. Затем вызовите эту функцию с параметрами a=10 и h=5 и выведите результат в консоль.</p>
+								  <p>2) Напишите функцию, которая генерирует случайное число в диапазоне от min до max и возвращает результат. Затем вызовите эту функцию с параметрами min=1 и max=100 и выведите результат в консоль.</p>
+								  <p>3)	Напишите функцию, которая находит наименьшее число из заданных и возвращает результат. Затем вызовите эту функцию с параметрами 10, 5 и 15 и выведите результат в консоль.</p>
+								  <p>4) Создайте функцию calcCircleArea(radius), которая будет вычислять площадь круга по заданному радиусу. Используйте для этого встроенную функцию Math.PI и Math.pow.</p>
 								  <div class="my-4">
 									  <details class="mt-1 border">
 										<summary class="p-2">Решение задач</summary>
@@ -131,39 +153,44 @@
 										<p>1)</p>
 										<div class="container border mb-3">
 											<code class="language-js " data-lang="js">
-												<span class="d-block text-break my-2">let arr = ["apple", "banana", "orange"];</span>
-												<span class="d-block text-break my-2">for (let index in arr) {</span>
-												<span class="d-block text-break my-2">console.log(index + ": " + arr[index]);</span>
+												<span class="d-block text-break my-2">function calculateTriangleArea(a, h) {</span>
+												<span class="d-block text-break my-2">let area = 0.5 * a * h;</span>
+												<span class="d-block text-break my-2">return area;</span>
 												<span class="d-block text-break my-2">}</span>
+												<span class="d-block text-break my-2">let triangleArea = calculateTriangleArea(10, 5);</span>
+												<span class="d-block text-break my-2">console.log("Площадь треугольника равна " + triangleArea);</span>
 										  </code>
 										  </div>
 										  <p>2)</p>
 										  <div class="container border mb-3">
 											<code class="language-js " data-lang="js">
-												<span class="d-block text-break my-2">let arr = [1, 2, 3, 4, 5, 6];</span>
-												<span class="d-block text-break my-2">for (let index in arr) {</span>
-												<span class="d-block text-break my-2">if (index % 2 === 0) {</span>
-												<span class="d-block text-break my-2">console.log(index + ": " + arr[index]);</span>
+												<span class="d-block text-break my-2">function getRandomNumber(min, max) {</span>
+												<span class="d-block text-break my-2">let randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;</span>
+												<span class="d-block text-break my-2">return randomNumber;</span>
 												<span class="d-block text-break my-2">}</span>
-												<span class="d-block text-break my-2">}</span>
+												<span class="d-block text-break my-2">let number = getRandomNumber(1, 100);</span>
+												<span class="d-block text-break my-2">console.log("Случайное число: " + number);</span>
 										  </code>
 										  </div>
 										  <p>3)</p>
 										  <div class="container border mb-3">
 											<code class="language-js " data-lang="js">
-												<span class="d-block text-break my-2">let str = "hello";</span>
-												<span class="d-block text-break my-2">for (let index in str) {</span>
-												<span class="d-block text-break my-2">console.log(index + ": " + str[index]);</span>
+												<span class="d-block text-break my-2">function findSmallestNumber(num1, num2, num3) {</span>
+												<span class="d-block text-break my-2">let smallestNumber = Math.min(num1, num2, num3);</span>
+												<span class="d-block text-break my-2">return smallestNumber;</span>
 												<span class="d-block text-break my-2">}</span>
+												<span class="d-block text-break my-2">let smallest = findSmallestNumber(10, 5, 15);</span>
+												<span class="d-block text-break my-2">console.log("Наименьшее число из 10, 5 и 15 равно " + smallest);</span>
 										  </code>
 										  </div>
 										  <p>4)</p>
 										  <div class="container border mb-3">
 											<code class="language-js " data-lang="js">
-												<span class="d-block text-break my-2">let obj = {a: 1, b: 2, c: 3};</span>
-												<span class="d-block text-break my-2">for (let key in obj) {</span>
-												<span class="d-block text-break my-2">console.log(key + ": " + obj[key]);</span>
+												<span class="d-block text-break my-2">function calcCircleArea(radius) {</span>
+												<span class="d-block text-break my-2">return Math.PI * Math.pow(radius,2);</span>
 												<span class="d-block text-break my-2">}</span>
+												<span class="d-block text-break my-2">console.log(calcCircleArea(5)); // вернет 78.53981633974483</span>
+												<span class="d-block text-break my-2">console.log(calcCircleArea(10)); // вернет 314.159265358979</span>
 										  </code>
 										  </div>
 										</div>
@@ -177,9 +204,9 @@
 								  </div>
 								  <div class="mb-3 d-flex justify-content-center">
 									<div class="me-4">
-										<a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="jslesson14.html"><span class="me-2">←</span><span>Предыдущий</span></a>
+										<a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="jslesson20.html"><span class="me-2">←</span><span>Предыдущий</span></a>
 									</div>
-									<a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="jslesson16.html"><span class="me-2">Следующий</span><span>→</span></a>
+									<a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="jslesson21.html"><span class="me-2">Следующий</span><span>→</span></a>
 								</div>
 								</div>
 							</div>

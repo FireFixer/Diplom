@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Объявление переменных | Python</title>
+    <title>Присвоение значений переменным | Python</title>
 	<link type="Image/x-icon" href="images/icon.ico" rel="icon">
 </head>
 <body class="d-flex flex-column ih-100"> 
@@ -44,8 +44,8 @@
 						<span class="switchmode fs-5 fw-semibold text-light">Навигация</span>
 					  </a>					  
 					<ol class="list-group list-group-numbered rounded-0 overflow-auto">
-						<li class="list-group-item border-top-0">Объявление переменных</li>
-						<li class="list-group-item"><a href="pytlesson2.html" id="my-link">Присвоение значений переменным</a></li>
+						<li class="list-group-item border-top-0"><a href="pytlesson1.html" id="my-link">Объявление переменных</a></li>
+						<li class="list-group-item">Присвоение значений переменным</li>
 						<li class="list-group-item"><a href="pytlesson3.html" id="my-link">Именование переменных</a></li>
 						<li class="list-group-item"><a href="pytlesson4.html" id="my-link">Типы данных</a></li>
 						<li class="list-group-item"><a href="pytlesson5.html" id="my-link">Арифметические операторы</a></li>
@@ -81,26 +81,19 @@
 						  <div class="card border-0">
 							<div class="card-body">
 								<div class="content">
-								  <h1 class="h3 font-weight-bold">Объявление переменных</h1>
-								  <p>Переменная в Python - это именованный объект, который используется для хранения и изменения значений данных в процессе выполнения программы. Для объявления переменной в Python не нужно использовать ключевое слово для объявления, такое как "var" в JavaScript. В Python переменные объявляются просто путем присваивания значения переменной. Например:</p>
+								  <h1 class="h3 font-weight-bold">Присвоение значений переменным</h1>
+								  <p>Присвоение значений переменным — это фундаментальная концепция программирования, которая включает в себя сохранение данных в ячейке памяти и присвоение им имени или идентификатора. В Python вы можете присвоить значение переменной с помощью оператора присваивания (=). Например, следующий код присваивает значение 5 переменной с именем x:</p>
 										<div class="container border mb-3">
 								  		<code class="language-python" data-lang="python">
-											<span class="d-block text-break my-2">x = 5 # объявление переменной x и присвоение ей значения 5</span>
-											<span class="d-block text-break my-2">y = None # объявление переменной y без начального значения</span>
+											<span class="d-block text-break my-2">x = 5</span>
 										</code>
 										</div>
-									<p>Python не требует объявления типа переменной во время объявления. Тип переменной определяется автоматически во время присваивания значения переменной. Например, если мы присваиваем значение "Hello World" переменной "greeting", то Python автоматически определяет тип переменной как "строка". Нет необходимости явно указывать тип переменной при ее объявлении.</p>
-									<p>Кроме того, в Python нет отдельных ключевых слов для объявления переменных со значениями, которые могут изменяться или не могут изменяться, как "let" и "const" в JavaScript. В Python все переменные могут изменяться после их объявления. Однако есть возможность объявления "констант" в Python, используя все заглавные буквы для имени переменной, чтобы указать, что ее значение не должно изменяться. Например:</p>
-									<div class="container border mb-3">
-										<code class="language-python" data-lang="python">
-										  <span class="d-block text-break my-2">PI = 3.14 # объявление константы PI со значением 3.14</span>
-									  </code>
-									  </div>
+									<p>В этом коде переменной x присваивается значение 5. Важно отметить, что Python — это язык с динамической типизацией, а это означает, что вам не нужно указывать тип данных переменной при ее объявлении.</p>
 								  <h1 class="h4 font-weight-bold">Практические задания</h1>
-								  <p>1)	Напишите программу на Python в интерпретаторе, которая объявляет две переменные и выводит их значения в консоль. Команда для вывода в консоль: print().</p>
-								  <p>2) Объявите переменную "age" и присвойте ей значение вашего возраста. Выведите значение переменной "age" на консоль.</p>
-								  <p>3) Объявите две переменные: "firstName" и "lastName". Присвойте им значения вашего имени и фамилии соответственно. Выведите значения переменных "firstName" и "lastName" на консоль.</p>
-								  <p>4) Объявите переменную "isAdmin" и присвойте ей логическое значение "True", если пользователь имеет права администратора, и "False", если нет. Выведите значение переменной "isAdmin" на консоль.</p>
+								  <p>1)	Напишите программу, которая объявляет три переменные (a, b и c) и присваивает им значения 10, 20 и 30 соответственно. Затем используйте print() для вывода суммы этих переменных.</p>
+								  <p>2) Создайте переменную "name" и присвойте ей значение "John". Затем создайте еще одну переменную "greeting" и присвойте ей значение "Hello, ". Используя оператор присваивания, объедините значение "greeting" и "name" в новую переменную "message". Выведите "message" в консоль.</p>
+								  <p>3) Создайте переменную "age" и присвойте ей значение 25. Затем создайте еще одну переменную "nextAge" и присвойте ей значение "age + 1". Выведите "nextAge" в консоль. Затем измените значение "age" на 30 и снова выведите "nextAge" в консоль. Обратите внимание на то, что значение "nextAge" не изменилось, так как оно было вычислено только один раз при его присвоении.</p>
+								  <p>4) Создайте переменную "x" и присвойте ей значение 10. Используя оператор присваивания, увеличьте значение "x" на 5. Затем используя тот же оператор, умножьте значение "x" на 2. Выведите "x" в консоль и обратите внимание на его новое значение.</p>
 								  <div class="my-4">
 									  <details class="mt-1 border">
 										<summary class="p-2">Решение задач</summary>
@@ -108,33 +101,38 @@
 										<p>1)</p>
 										<div class="container border mb-3">
 											<code class="language-python " data-lang="python">
-											  <span class="d-block text-break my-2">x = 5</span>
-											  <span class="d-block text-break my-2">y = 10</span>
-											  <span class="d-block text-break my-2">print(x) # выведет 5 в консоль</span>
-											  <span class="d-block text-break my-2">print(y) # выведет 10 в консоль</span>
+											  <span class="d-block text-break my-2">a = 10</span>
+											  <span class="d-block text-break my-2">b = 20</span>
+											  <span class="d-block text-break my-2">c = 30</span>
+											  <span class="d-block text-break my-2">print(a+b+C)</span>
 										  </code>
 										  </div>
 										  <p>2)</p>
 										  <div class="container border mb-3">
 											<code class="language-python " data-lang="python">
-											  <span class="d-block text-break my-2">age = 25</span>
-											  <span class="d-block text-break my-2">print(age)</span>
+											  <span class="d-block text-break my-2">name = "John"</span>
+											  <span class="d-block text-break my-2">greeting = "Hello, "</span>
+											  <span class="d-block text-break my-2">message = greeting + name</span>
+											  <span class="d-block text-break my-2">print(message)</span>
 										  </code>
 										  </div>
 										  <p>3)</p>
 										  <div class="container border mb-3">
 											<code class="language-python " data-lang="python">
-											  <span class="d-block text-break my-2">firstName = "John"</span>
-											  <span class="d-block text-break my-2">lastName = "Doe"</span>
-											  <span class="d-block text-break my-2">print(firstName)</span>
-											  <span class="d-block text-break my-2">print(lastName)</span>
+											  <span class="d-block text-break my-2">age = 25</span>
+											  <span class="d-block text-break my-2">nextAge = age + 1</span>
+											  <span class="d-block text-break my-2">print(nextAge)</span>
+											  <span class="d-block text-break my-2">age = 30</span>
+											  <span class="d-block text-break my-2">print(nextAge)</span>
 										  </code>
 										  </div>
 										  <p>4)</p>
 										  <div class="container border mb-3">
 											<code class="language-python " data-lang="python">
-											  <span class="d-block text-break my-2">isAdmin = True</span>
-											  <span class="d-block text-break my-2">print(isAdmin)</span>
+											  <span class="d-block text-break my-2">x = 10</span>
+											  <span class="d-block text-break my-2">x += 5</span>
+											  <span class="d-block text-break my-2">x *= 2</span>
+											  <span class="d-block text-break my-2">print(x)</span>
 										  </code>
 										  </div>
 										</div>
@@ -147,7 +145,11 @@
 									</details>
 								  </div>
 								  <div class="mb-3 d-flex justify-content-center">
-									<div class="me-4"></div><a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="pytlesson2.html"><span class="me-2">Следующий</span><span>→</span></a></div>
+									<div class="me-4">
+										<a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="pytlesson1.html"><span class="me-2">←</span><span>Предыдущий</span></a>
+									</div>
+									<a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="pytlesson3.html"><span class="me-2">Следующий</span><span>→</span></a>
+								</div>
 								</div>
 							</div>
 						  </div>

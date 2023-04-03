@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Методы массивов</title>
+    <title>Cоздание массивов</title>
 	<link type="Image/x-icon" href="images/icon.ico" rel="icon">
 </head>
 <body class="d-flex flex-column ih-100"> 
@@ -64,10 +64,10 @@
 						<li class="list-group-item"><a href="jslesson18.html">Цикл do...while</a></li>
 						<li class="list-group-item"><a href="jslesson19.html">Обычные функции</a></li>
 						<li class="list-group-item"><a href="jslesson20.html">Стрелочные функции</a></li>
-						<li class="list-group-item"><a href="jslesson20m.html">Математические функции</a></li>
-						<li class="list-group-item"><a href="jslesson21.html">Создание массивов</a></li>
-						<li class="list-group-item">Методы массивов</li>
-						<li class="list-group-item"><a href="jslesson23.html">Объекты</a></li>
+						<li class="list-group-item"><a href="jslesson21.html">Математические функции</a></li>
+						<li class="list-group-item">Создание массивов</li>
+						<li class="list-group-item"><a href="jslesson23.html">Методы массивов</a></li>
+						<li class="list-group-item"><a href="jslesson24.html">Объекты</a></li>
 					  </ol>
 				</div>
 		  		</div>
@@ -81,79 +81,44 @@
 						  <div class="card border-0">
 							<div class="card-body">
 								<div class="content">
-								  <h1 class="h3 font-weight-bold">Методы массивов</h1>
-								  <p>Методы массивов - это набор встроенных функций в JavaScript, которые позволяют изменять и манипулировать элементами массивов. Они могут быть использованы для добавления и удаления элементов массива, сортировки элементов, изменения элементов и многого другого.</p>
-								  <p>Некоторые из наиболее распространенных методов массивов:</p>
-								  <p>push(): добавляет один или несколько элементов в конец массива.</p>
+								  <h1 class="h3 font-weight-bold">Создание массивов</h1>
+								  <p>Массив в JavaScript - это структура данных, которая хранит упорядоченные наборы значений любого типа. Одномерный массив - это простейший вид массива, который хранит набор значений в одну строку.</p>
+								  <p>Создание массива в JavaScript осуществляется с помощью квадратных скобок. Внутри скобок указываются элементы массива через запятую. Например, создадим одномерный массив, который будет содержать пять чисел:</p>
 								  <div class="container border mb-3">
 									<code class="language-js " data-lang="js">
-										<span class="d-block text-break my-2">let fruits = ["apple", "banana"];</span>
-										<span class="d-block text-break my-2">fruits.push("orange");</span>
-										<span class="d-block text-break my-2">console.log(fruits); // ["apple", "banana", "orange"]</span>
+										<span class="d-block text-break my-2">let numbers = [1, 2, 3, 4, 5];</span>
 									</code>
 									</div>
-								  <p>pop(): удаляет последний элемент из массива и возвращает его.</p>
+								  <p>Каждый элемент массива имеет свой индекс, начинающийся с 0. Например, чтобы получить первый элемент массива, мы обращаемся к нему по индексу 0:</p>
 								  <div class="container border mb-3">
 									<code class="language-js " data-lang="js">
-										<span class="d-block text-break my-2">let fruits = ["apple", "banana", "orange"];</span>
-										<span class="d-block text-break my-2">let removedFruit = fruits.pop();</span>
-										<span class="d-block text-break my-2">console.log(removedFruit); // "orange"</span>
-										<span class="d-block text-break my-2">console.log(fruits); // ["apple", "banana"]</span>
+										<span class="d-block text-break my-2">console.log(numbers[0]); // выведет 1</span>
 									</code>
 									</div>
-								  <p>filter(): возвращает новый массив, содержащий только те элементы исходного массива, которые соответствуют заданному условию</p>
+								  <p>Массивы могут содержать элементы разных типов, включая другие массивы:</p>
 								  <div class="container border mb-3">
 									<code class="language-js " data-lang="js">
-										<span class="d-block text-break my-2">const numbers = [1, 2, 3, 4, 5, 6];</span>
-										<span class="d-block text-break my-2">const evenNumbers = numbers.filter((number) => number % 2 === 0);</span>
-										<span class="d-block text-break my-2">console.log(evenNumbers); // Output: [2, 4, 6]</span>
+										<span class="d-block text-break my-2">let mixedArray = ['apple', 5, true, ['banana', 'cherry']];</span>
 									</code>
 									</div>
-									<p>map(): возвращает новый массив, содержащий результаты применения заданной функции к каждому элементу исходного массива</p>
+									<p>Для создания многомерных массивов в JavaScript можно использовать вложенные квадратные скобки. Например, создадим двумерный массив, который будет содержать два вложенных одномерных массива:</p>
 								  <div class="container border mb-3">
 									<code class="language-js " data-lang="js">
-										<span class="d-block text-break my-2">const numbers = [1, 2, 3, 4, 5];</span>
-										<span class="d-block text-break my-2">const doubledNumbers = numbers.map((number) => number * 2);</span>
-										<span class="d-block text-break my-2">console.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]</span>
+										<span class="d-block text-break my-2">let twoDimensionalArray = [[1, 2, 3], [4, 5, 6]];</span>
 									</code>
 									</div>
-									<p>splice(): изменяет содержимое массива, добавляя новые элементы, удаляя существующие элементы или заменяя существующие элементы.</p>
+									<p>Обращаться к элементам двумерного массива можно, указывая два индекса: первый индекс указывает на вложенный массив, а второй - на элемент внутри вложенного массива:</p>
 									<div class="container border mb-3">
 									  <code class="language-js " data-lang="js">
-										  <span class="d-block text-break my-2">let fruits = ["apple", "banana", "orange"];</span>
-										  <span class="d-block text-break my-2">fruits.splice(1, 1, "grape", "melon");</span>
-										  <span class="d-block text-break my-2">console.log(fruits); // ["apple", "grape", "melon", "orange"]</span>
+										  <span class="d-block text-break my-2">console.log(twoDimensionalArray[1][2]); // выведет 6</span>
 									  </code>
-									</div>
-									<p>slice(): возвращает новый массив, содержащий копию части исходного массива.</p>
-									<div class="container border mb-3">
-									  <code class="language-js " data-lang="js">
-										  <span class="d-block text-break my-2">const numbers = [1, 2, 3, 4, 5];</span>
-										  <span class="d-block text-break my-2">const slicedNumbers = numbers.slice(1, 4);</span>
-										  <span class="d-block text-break my-2">console.log(slicedNumbers); // [2, 3, 4]</span>
-									  </code>
-									</div>
-									 <p>concat(): возвращает новый массив, состоящий из элементов двух или более массивов.</p>
-									<div class="container border mb-3">
-									  <code class="language-js " data-lang="js">
-										  <span class="d-block text-break my-2">const array1 = [1, 2, 3];</span>
-										  <span class="d-block text-break my-2">const array2 = [4, 5, 6];</span>
-										  <span class="d-block text-break my-2">const newArray = array1.concat(array2);</span>
-										  <span class="d-block text-break my-2">console.log(newArray); // [1, 2, 3, 4, 5, 6]</span>
-									  </code>
-									</div>
-									<p>Метод forEach() выполняет заданную функцию для каждого элемента массива, без создания нового массива. Например, мы можем использовать метод forEach() для вывода каждого элемента массива на консоль:</p>
-									<div class="container border mb-3">
-									  <code class="language-js " data-lang="js">
-										  <span class="d-block text-break my-2">const fruits = ['apple', 'banana', 'orange'];</span>
-										  <span class="d-block text-break my-2">fruits.forEach((fruit) => console.log(fruit)); // Output: apple banana orange</span>
-									  </code>
-									</div>
+									  </div>
+									  <p>Также можно создавать многомерные массивы с большим количеством уровней вложенности.</p>
 								  <h1 class="h4 font-weight-bold">Практические задания</h1>
-								  <p>1)	Используя метод filter() и цикл for, создайте новый массив, содержащий только положительные числа из данного массива.</p>
-								  <p>2) Используя метод map(), создайте новый массив, содержащий квадраты чисел из данного массива.</p>
-								  <p>3) Используя метод slice(), создайте новый массив, содержащий элементы данного массива, начиная с индекса 2 и заканчивая индексом 4.</p>
-								  <p>4) Используя метод slice(), выведите на консоль каждую строку данного массива, написанную в обратном порядке.</p>
+								  <p>1)	Создайте функцию, которая принимает массив чисел и возвращает сумму этих чисел.</p>
+								  <p>2) Создайте функцию, которая принимает два массива чисел и возвращает новый массив, содержащий суммы соответствующих элементов этих массивов.</p>
+								  <p>3) Создайте функцию, которая принимает массив чисел и возвращает новый массив, содержащий только четные числа из исходного массива.</p>
+								  <p>4) Создайте функцию, которая принимает массив строк и возвращает количество строк, содержащих символ 'a'</p>
 								  <div class="my-4">
 									  <details class="mt-1 border">
 										<summary class="p-2">Решение задач</summary>
@@ -161,42 +126,63 @@
 										<p>1)</p>
 										<div class="container border mb-3">
 											<code class="language-js " data-lang="js">
-												<span class="d-block text-break my-2">const numbers = [-1, 2, -3, 4, -5, 6];</span>
-												<span class="d-block text-break my-2">const positiveNumbers = [];</span>
-												<span class="d-block text-break my-2">numbers.filter(function(number) {</span>
-												<span class="d-block text-break my-2">if (number > 0) {</span>
-												<span class="d-block text-break my-2">positiveNumbers.push(number);</span>
+												<span class="d-block text-break my-2">function sumArray(numbers) {</span>
+												<span class="d-block text-break my-2">let sum = 0;</span>
+												<span class="d-block text-break my-2">for (let i = 0; i < numbers.length; i++) {</span>
+												<span class="d-block text-break my-2">sum += numbers[i];</span>
 												<span class="d-block text-break my-2">}</span>
-												<span class="d-block text-break my-2">});</span>
-												<span class="d-block text-break my-2">console.log(positiveNumbers); // Output: [2, 4, 6]</span>
+												<span class="d-block text-break my-2">return sum;</span>
+												<span class="d-block text-break my-2">}</span>
+												<span class="d-block text-break my-2">console.log(sumArray([1, 2, 3, 4, 5])); // 15</span>
+												<span class="d-block text-break my-2">console.log(sumArray([-1, 0, 1])); // 0</span>
 										  </code>
 										  </div>
 										  <p>2)</p>
 										  <div class="container border mb-3">
 											<code class="language-js " data-lang="js">
-												<span class="d-block text-break my-2">const numbers = [1, 2, 3, 4, 5];</span>
-												<span class="d-block text-break my-2">const squaredNumbers = numbers.map(function(number) {</span>
-												<span class="d-block text-break my-2">return number * number</span>
-												<span class="d-block text-break my-2">});</span>
-												<span class="d-block text-break my-2">console.log(squaredNumbers); // Output: [1, 4, 9, 16, 25]</span>
+												<span class="d-block text-break my-2">function sumArrays(arr1, arr2) {</span>
+												<span class="d-block text-break my-2">const result = [];</span>
+												<span class="d-block text-break my-2">for (let i = 0; i < arr1.length; i++) {</span>
+												<span class="d-block text-break my-2">result[i] = arr1[i] + arr2[i];</span>
+												<span class="d-block text-break my-2">}</span>
+												<span class="d-block text-break my-2">return result;</span>
+												<span class="d-block text-break my-2">}</span>
+												<span class="d-block text-break my-2">console.log(sumArrays([1, 2, 3], [4, 5, 6])); // [5, 7, 9]</span>
+												<span class="d-block text-break my-2">console.log(sumArrays([10, 20], [5, 10])); // [15, 30]</span>
 										  </code>
 										  </div>
 										  <p>3)</p>
 										  <div class="container border mb-3">
 											<code class="language-js " data-lang="js">
-												<span class="d-block text-break my-2">const numbers = [1, 2, 3, 4, 5];</span>
-												<span class="d-block text-break my-2">const slicedNumbers = numbers.slice(2, 5);</span>
-												<span class="d-block text-break my-2">console.log(slicedNumbers); // Output: [3, 4, 5]</span>
+												<span class="d-block text-break my-2">function filterEvenNumbers(numbers) {</span>
+												<span class="d-block text-break my-2">const result = [];</span>
+												<span class="d-block text-break my-2">let index = 0;</span>
+												<span class="d-block text-break my-2">for (let i = 0; i < numbers.length; i++) {</span>
+												<span class="d-block text-break my-2">if (numbers[i] % 2 === 0) {</span>
+												<span class="d-block text-break my-2">result[index] = numbers[i];</span>
+												<span class="d-block text-break my-2">index++;</span>
+												<span class="d-block text-break my-2">}</span>
+												<span class="d-block text-break my-2">}</span>
+												<span class="d-block text-break my-2">return result;</span>
+												<span class="d-block text-break my-2">}</span>
+												<span class="d-block text-break my-2">console.log(filterEvenNumbers([1, 2, 3, 4, 5, 6])); // [2, 4, 6]</span>
+												<span class="d-block text-break my-2">console.log(filterEvenNumbers([-2, -1, 0, 1, 2])); // [-2, 0, 2]</span>
 										  </code>
 										  </div>
 										  <p>4)</p>
 										  <div class="container border mb-3">
 											<code class="language-js " data-lang="js">
-												<span class="d-block text-break my-2">const strings = ["apple", "banana", "orange", "pear", "pineapple"];</span>
-												<span class="d-block text-break my-2">strings.forEach(function(string) {</span>
-												<span class="d-block text-break my-2">const reversedString = string.split("").reverse().join("");</span>
-												<span class="d-block text-break my-2">console.log(reversedString);</span>
-												<span class="d-block text-break my-2">});</span>
+												<span class="d-block text-break my-2">function countAStrings(strings) {</span>
+												<span class="d-block text-break my-2">let count = 0;</span>
+												<span class="d-block text-break my-2">for (let i = 0; i < strings.length; i++) {</span>
+												<span class="d-block text-break my-2">if (strings[i].includes('a')) {</span>
+												<span class="d-block text-break my-2">count++;</span>
+												<span class="d-block text-break my-2">}</span>
+												<span class="d-block text-break my-2">}</span>
+												<span class="d-block text-break my-2">return count;</span>
+												<span class="d-block text-break my-2">}</span>
+												<span class="d-block text-break my-2">console.log(countAStrings(['apple', 'banana', 'cherry'])); // 2</span>
+												<span class="d-block text-break my-2">console.log(countAStrings(['dog', 'cat', 'fish'])); // 1</span>
 										  </code>
 										  </div>
 										</div>

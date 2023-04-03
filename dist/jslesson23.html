@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Объекты</title>
+    <title>Методы массивов</title>
 	<link type="Image/x-icon" href="images/icon.ico" rel="icon">
 </head>
 <body class="d-flex flex-column ih-100"> 
@@ -64,10 +64,10 @@
 						<li class="list-group-item"><a href="jslesson18.html">Цикл do...while</a></li>
 						<li class="list-group-item"><a href="jslesson19.html">Обычные функции</a></li>
 						<li class="list-group-item"><a href="jslesson20.html">Стрелочные функции</a></li>
-						<li class="list-group-item"><a href="jslesson20m.html">Математические функции</a></li>
-						<li class="list-group-item"><a href="jslesson21.html">Создание массивов</a></li>
-						<li class="list-group-item"><a href="jslesson22.html">Методы массивов</a></li>
-						<li class="list-group-item">Объекты</li>
+						<li class="list-group-item"><a href="jslesson21.html">Математические функции</a></li>
+						<li class="list-group-item"><a href="jslesson22.html">Создание массивов</a></li>
+						<li class="list-group-item">Методы массивов</li>
+						<li class="list-group-item"><a href="jslesson24.html">Объекты</a></li>
 					  </ol>
 				</div>
 		  		</div>
@@ -81,56 +81,79 @@
 						  <div class="card border-0">
 							<div class="card-body">
 								<div class="content">
-								  <h1 class="h3 font-weight-bold">Объекты</h1>
-								  <p>Объекты в JavaScript - это структуры данных, которые используются для хранения коллекций свойств (ключей) и их значений. Ключи могут быть любой строкой или символом, а значения - любым типом данных, включая другие объекты.</p>
-								  <p>Синтаксис создания объекта выглядит следующим образом:</p>
+								  <h1 class="h3 font-weight-bold">Методы массивов</h1>
+								  <p>Методы массивов - это набор встроенных функций в JavaScript, которые позволяют изменять и манипулировать элементами массивов. Они могут быть использованы для добавления и удаления элементов массива, сортировки элементов, изменения элементов и многого другого.</p>
+								  <p>Некоторые из наиболее распространенных методов массивов:</p>
+								  <p>push(): добавляет один или несколько элементов в конец массива.</p>
 								  <div class="container border mb-3">
 									<code class="language-js " data-lang="js">
-										<span class="d-block text-break my-2">const person = {</span>
-										<span class="d-block text-break my-2">name: 'Alice',</span>
-										<span class="d-block text-break my-2">age: 25,</span>
-										<span class="d-block text-break my-2">city: 'London'</span>
-										<span class="d-block text-break my-2">};</span>
+										<span class="d-block text-break my-2">let fruits = ["apple", "banana"];</span>
+										<span class="d-block text-break my-2">fruits.push("orange");</span>
+										<span class="d-block text-break my-2">console.log(fruits); // ["apple", "banana", "orange"]</span>
 									</code>
 									</div>
-								  <p>В этом примере мы создаем объект person, содержащий три ключа (name, age и city) и их соответствующие значения ('Alice', 25 и 'London').</p>
-								  <p>Мы можем обращаться к свойствам объекта, используя точечную нотацию или квадратные скобки:</p>
+								  <p>pop(): удаляет последний элемент из массива и возвращает его.</p>
 								  <div class="container border mb-3">
 									<code class="language-js " data-lang="js">
-										<span class="d-block text-break my-2">console.log(person.name); // Alice</span>
-										<span class="d-block text-break my-2">console.log(person['age']); // 25</span>
+										<span class="d-block text-break my-2">let fruits = ["apple", "banana", "orange"];</span>
+										<span class="d-block text-break my-2">let removedFruit = fruits.pop();</span>
+										<span class="d-block text-break my-2">console.log(removedFruit); // "orange"</span>
+										<span class="d-block text-break my-2">console.log(fruits); // ["apple", "banana"]</span>
 									</code>
 									</div>
-								  <p>Здесь мы выводим значение свойств name и age объекта person на консоль, используя точечную нотацию и квадратные скобки соответственно.</p>
-								  <p>Мы также можем изменять значения свойств объекта и добавлять новые свойства:</p>
+								  <p>filter(): возвращает новый массив, содержащий только те элементы исходного массива, которые соответствуют заданному условию</p>
 								  <div class="container border mb-3">
 									<code class="language-js " data-lang="js">
-										<span class="d-block text-break my-2">person.age = 26;</span>
-										<span class="d-block text-break my-2">person.country = 'UK';</span>
-										<span class="d-block text-break my-2">console.log(person); // { name: 'Alice', age: 26, city: 'London', country: 'UK' }</span>
+										<span class="d-block text-break my-2">const numbers = [1, 2, 3, 4, 5, 6];</span>
+										<span class="d-block text-break my-2">const evenNumbers = numbers.filter((number) => number % 2 === 0);</span>
+										<span class="d-block text-break my-2">console.log(evenNumbers); // Output: [2, 4, 6]</span>
 									</code>
 									</div>
-									<p>Здесь мы изменяем значение свойства age объекта person на 26, добавляем новое свойство country со значением 'UK' и выводим объект person на консоль.</p>
-									<p>Объекты в JavaScript также могут иметь методы - функции, которые определены внутри объекта и имеют доступ к его свойствам.</p>
+									<p>map(): возвращает новый массив, содержащий результаты применения заданной функции к каждому элементу исходного массива</p>
 								  <div class="container border mb-3">
 									<code class="language-js " data-lang="js">
-										<span class="d-block text-break my-2">const car = {</span>
-										<span class="d-block text-break my-2">brand: 'Toyota',</span>
-										<span class="d-block text-break my-2">model: 'Camry',</span>
-										<span class="d-block text-break my-2">year: 2020,</span>
-										<span class="d-block text-break my-2">getInfo: function() {</span>
-										<span class="d-block text-break my-2">return `${this.brand} ${this.model} (${this.year})`;</span>
-										<span class="d-block text-break my-2">}</span>
-										<span class="d-block text-break my-2">};</span>
-										<span class="d-block text-break my-2">console.log(car.getInfo()); // Toyota Camry (2020)</span>
+										<span class="d-block text-break my-2">const numbers = [1, 2, 3, 4, 5];</span>
+										<span class="d-block text-break my-2">const doubledNumbers = numbers.map((number) => number * 2);</span>
+										<span class="d-block text-break my-2">console.log(doubledNumbers); // Output: [2, 4, 6, 8, 10]</span>
 									</code>
 									</div>
-									<p>В этом примере мы создаем объект car, содержащий свойства brand, model и year, а также метод getInfo, который возвращает строку с информацией о машине. Внутри метода мы используем ключевое слово this, чтобы обращаться к свойствам объекта car.</p>
+									<p>splice(): изменяет содержимое массива, добавляя новые элементы, удаляя существующие элементы или заменяя существующие элементы.</p>
+									<div class="container border mb-3">
+									  <code class="language-js " data-lang="js">
+										  <span class="d-block text-break my-2">let fruits = ["apple", "banana", "orange"];</span>
+										  <span class="d-block text-break my-2">fruits.splice(1, 1, "grape", "melon");</span>
+										  <span class="d-block text-break my-2">console.log(fruits); // ["apple", "grape", "melon", "orange"]</span>
+									  </code>
+									</div>
+									<p>slice(): возвращает новый массив, содержащий копию части исходного массива.</p>
+									<div class="container border mb-3">
+									  <code class="language-js " data-lang="js">
+										  <span class="d-block text-break my-2">const numbers = [1, 2, 3, 4, 5];</span>
+										  <span class="d-block text-break my-2">const slicedNumbers = numbers.slice(1, 4);</span>
+										  <span class="d-block text-break my-2">console.log(slicedNumbers); // [2, 3, 4]</span>
+									  </code>
+									</div>
+									 <p>concat(): возвращает новый массив, состоящий из элементов двух или более массивов.</p>
+									<div class="container border mb-3">
+									  <code class="language-js " data-lang="js">
+										  <span class="d-block text-break my-2">const array1 = [1, 2, 3];</span>
+										  <span class="d-block text-break my-2">const array2 = [4, 5, 6];</span>
+										  <span class="d-block text-break my-2">const newArray = array1.concat(array2);</span>
+										  <span class="d-block text-break my-2">console.log(newArray); // [1, 2, 3, 4, 5, 6]</span>
+									  </code>
+									</div>
+									<p>Метод forEach() выполняет заданную функцию для каждого элемента массива, без создания нового массива. Например, мы можем использовать метод forEach() для вывода каждого элемента массива на консоль:</p>
+									<div class="container border mb-3">
+									  <code class="language-js " data-lang="js">
+										  <span class="d-block text-break my-2">const fruits = ['apple', 'banana', 'orange'];</span>
+										  <span class="d-block text-break my-2">fruits.forEach((fruit) => console.log(fruit)); // Output: apple banana orange</span>
+									  </code>
+									</div>
 								  <h1 class="h4 font-weight-bold">Практические задания</h1>
-								  <p>1)	Создать объект "user" с методами "login" и "logout". Метод "login" должен принимать параметр "username" и выводить сообщение в консоль "Пользователь username успешно вошел в систему". Метод "logout" должен выводить сообщение в консоль "Пользователь успешно вышел из системы".</p>
-								  <p>2) Создать объект "calculator" с методами "add", "subtract", "multiply" и "divide". Методы должны принимать два параметра и возвращать результат соответствующей операции.</p>
-								  <p>3) Создать объект "book" с полями "title", "author" и "pages". Добавить метод "read", который будет выводить в консоль сообщение "Я читаю книгу title, написанную author, на странице page." Значения title, author и page должны быть взяты из соответствующих полей объекта.</p>
-								  <p>4) Создать объект "user" с полями "name", "email" и "password". Добавить метод "validatePassword", который будет принимать параметр "password" и возвращать true, если значение поля "password" равно параметру, и false в противном случае.</p>
+								  <p>1)	Используя метод filter() и цикл for, создайте новый массив, содержащий только положительные числа из данного массива.</p>
+								  <p>2) Используя метод map(), создайте новый массив, содержащий квадраты чисел из данного массива.</p>
+								  <p>3) Используя метод slice(), создайте новый массив, содержащий элементы данного массива, начиная с индекса 2 и заканчивая индексом 4.</p>
+								  <p>4) Используя метод slice(), выведите на консоль каждую строку данного массива, написанную в обратном порядке.</p>
 								  <div class="my-4">
 									  <details class="mt-1 border">
 										<summary class="p-2">Решение задач</summary>
@@ -138,68 +161,42 @@
 										<p>1)</p>
 										<div class="container border mb-3">
 											<code class="language-js " data-lang="js">
-												<span class="d-block text-break my-2">let user = {</span>
-												<span class="d-block text-break my-2">login: function(username) {</span>
-												<span class="d-block text-break my-2">console.log("Пользователь " + username + " успешно вошел в систему");</span>
-												<span class="d-block text-break my-2">},</span>
-												<span class="d-block text-break my-2">logout: function() {</span>
-												<span class="d-block text-break my-2">console.log("Пользователь успешно вышел из системы");</span>
+												<span class="d-block text-break my-2">const numbers = [-1, 2, -3, 4, -5, 6];</span>
+												<span class="d-block text-break my-2">const positiveNumbers = [];</span>
+												<span class="d-block text-break my-2">numbers.filter(function(number) {</span>
+												<span class="d-block text-break my-2">if (number > 0) {</span>
+												<span class="d-block text-break my-2">positiveNumbers.push(number);</span>
 												<span class="d-block text-break my-2">}</span>
-												<span class="d-block text-break my-2">};</span>
-												<span class="d-block text-break my-2">user.login("john_doe"); // Вывод: Пользователь john_doe успешно вошел в систему</span>
-												<span class="d-block text-break my-2">user.logout(); // Вывод: Пользователь успешно вышел из системы</span>
+												<span class="d-block text-break my-2">});</span>
+												<span class="d-block text-break my-2">console.log(positiveNumbers); // Output: [2, 4, 6]</span>
 										  </code>
 										  </div>
 										  <p>2)</p>
 										  <div class="container border mb-3">
 											<code class="language-js " data-lang="js">
-												<span class="d-block text-break my-2">let calculator = {</span>
-												<span class="d-block text-break my-2">add: function(a, b) {</span>
-												<span class="d-block text-break my-2">return a + b;</span>
-												<span class="d-block text-break my-2">},</span>
-												<span class="d-block text-break my-2">subtract: function(a, b) {</span>
-												<span class="d-block text-break my-2">return a - b;</span>
-												<span class="d-block text-break my-2">},</span>
-												<span class="d-block text-break my-2">multiply: function(a, b) {</span>
-												<span class="d-block text-break my-2">return a * b;</span>
-												<span class="d-block text-break my-2">},</span>
-												<span class="d-block text-break my-2">divide: function(a, b) {</span>
-												<span class="d-block text-break my-2">return a / b;</span>
-												<span class="d-block text-break my-2">},</span>
-												<span class="d-block text-break my-2">};</span>
-												<span class="d-block text-break my-2">console.log(calculator.add(2, 3)); // Вывод: 5</span>
-												<span class="d-block text-break my-2">console.log(calculator.subtract(5, 3)); // Вывод: 2</span>
-												<span class="d-block text-break my-2">console.log(calculator.multiply(2, 3)); // Вывод: 6</span>
-												<span class="d-block text-break my-2">console.log(calculator.divide(6, 3)); // Вывод: 2</span>
+												<span class="d-block text-break my-2">const numbers = [1, 2, 3, 4, 5];</span>
+												<span class="d-block text-break my-2">const squaredNumbers = numbers.map(function(number) {</span>
+												<span class="d-block text-break my-2">return number * number</span>
+												<span class="d-block text-break my-2">});</span>
+												<span class="d-block text-break my-2">console.log(squaredNumbers); // Output: [1, 4, 9, 16, 25]</span>
 										  </code>
 										  </div>
 										  <p>3)</p>
 										  <div class="container border mb-3">
 											<code class="language-js " data-lang="js">
-												<span class="d-block text-break my-2">let book = {</span>
-												<span class="d-block text-break my-2">title: "To Kill a Mockingbird",</span>
-												<span class="d-block text-break my-2">author: "Harper Lee",</span>
-												<span class="d-block text-break my-2">pages: 281,</span>
-												<span class="d-block text-break my-2">read: function() {</span>
-												<span class="d-block text-break my-2">console.log("Я читаю книгу " + this.title + ", написанную " + this.author + ", на странице " + this.pages + ".");</span>
-												<span class="d-block text-break my-2">}</span>
-												<span class="d-block text-break my-2">};</span>
-												<span class="d-block text-break my-2">book.read(); // Вывод: Я читаю книгу To Kill a Mockingbird, написанную Harper Lee, на странице 281</span>
+												<span class="d-block text-break my-2">const numbers = [1, 2, 3, 4, 5];</span>
+												<span class="d-block text-break my-2">const slicedNumbers = numbers.slice(2, 5);</span>
+												<span class="d-block text-break my-2">console.log(slicedNumbers); // Output: [3, 4, 5]</span>
 										  </code>
 										  </div>
 										  <p>4)</p>
 										  <div class="container border mb-3">
 											<code class="language-js " data-lang="js">
-												<span class="d-block text-break my-2">let user = {</span>
-												<span class="d-block text-break my-2">name: "John",</span>
-												<span class="d-block text-break my-2">email: "john@example.com",</span>
-												<span class="d-block text-break my-2">password: "12345",</span>
-												<span class="d-block text-break my-2">validatePassword: function(password) {</span>
-												<span class="d-block text-break my-2">return this.password === password;</span>
-												<span class="d-block text-break my-2">}</span>
-												<span class="d-block text-break my-2">};</span>
-												<span class="d-block text-break my-2">console.log(user.validatePassword("12345")); // Вывод: true</span>
-												<span class="d-block text-break my-2">console.log(user.validatePassword("54321")); // Вывод: false</span>
+												<span class="d-block text-break my-2">const strings = ["apple", "banana", "orange", "pear", "pineapple"];</span>
+												<span class="d-block text-break my-2">strings.forEach(function(string) {</span>
+												<span class="d-block text-break my-2">const reversedString = string.split("").reverse().join("");</span>
+												<span class="d-block text-break my-2">console.log(reversedString);</span>
+												<span class="d-block text-break my-2">});</span>
 										  </code>
 										  </div>
 										</div>
@@ -215,6 +212,7 @@
 									<div class="me-4">
 										<a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="jslesson22.html"><span class="me-2">←</span><span>Предыдущий</span></a>
 									</div>
+									<a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="jslesson24.html"><span class="me-2">Следующий</span><span>→</span></a>
 								</div>
 								</div>
 							</div>

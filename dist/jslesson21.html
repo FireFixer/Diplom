@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cоздание массивов</title>
+    <title>Математические функции</title>
 	<link type="Image/x-icon" href="images/icon.ico" rel="icon">
 </head>
 <body class="d-flex flex-column ih-100"> 
@@ -64,10 +64,10 @@
 						<li class="list-group-item"><a href="jslesson18.html">Цикл do...while</a></li>
 						<li class="list-group-item"><a href="jslesson19.html">Обычные функции</a></li>
 						<li class="list-group-item"><a href="jslesson20.html">Стрелочные функции</a></li>
-						<li class="list-group-item"><a href="jslesson20m.html">Математические функции</a></li>
-						<li class="list-group-item">Создание массивов</li>
-						<li class="list-group-item"><a href="jslesson22.html">Методы массивов</a></li>
-						<li class="list-group-item"><a href="jslesson23.html">Объекты</a></li>
+						<li class="list-group-item">Математические функции</li>
+						<li class="list-group-item"><a href="jslesson22.html">Создание массивов</a></li>
+						<li class="list-group-item"><a href="jslesson23.html">Методы массивов</a></li>
+						<li class="list-group-item"><a href="jslesson24.html">Объекты</a></li>
 					  </ol>
 				</div>
 		  		</div>
@@ -81,44 +81,71 @@
 						  <div class="card border-0">
 							<div class="card-body">
 								<div class="content">
-								  <h1 class="h3 font-weight-bold">Создание массивов</h1>
-								  <p>Массив в JavaScript - это структура данных, которая хранит упорядоченные наборы значений любого типа. Одномерный массив - это простейший вид массива, который хранит набор значений в одну строку.</p>
-								  <p>Создание массива в JavaScript осуществляется с помощью квадратных скобок. Внутри скобок указываются элементы массива через запятую. Например, создадим одномерный массив, который будет содержать пять чисел:</p>
+								  <h1 class="h3 font-weight-bold">Математические функции</h1>
+								  <p>Математические функции в JavaScript позволяют осуществлять различные математические операции над числами. В языке JavaScript предусмотрено множество встроенных математических функций, которые можно использовать в своих программах. Рассмотрим некоторые из них.</p>
+								  <p>Math.abs(x) - возвращает абсолютное значение числа x. Например:</p>
 								  <div class="container border mb-3">
 									<code class="language-js " data-lang="js">
-										<span class="d-block text-break my-2">let numbers = [1, 2, 3, 4, 5];</span>
+										<span class="d-block text-break my-2">Math.abs(-5); // вернет 5</span>
+										<span class="d-block text-break my-2">Math.abs(5); // вернет 5</span>
 									</code>
 									</div>
-								  <p>Каждый элемент массива имеет свой индекс, начинающийся с 0. Например, чтобы получить первый элемент массива, мы обращаемся к нему по индексу 0:</p>
+								  <p>Math.ceil(x) - округляет число x до ближайшего большего целого. Например:</p>
 								  <div class="container border mb-3">
 									<code class="language-js " data-lang="js">
-										<span class="d-block text-break my-2">console.log(numbers[0]); // выведет 1</span>
+										<span class="d-block text-break my-2">Math.ceil(4.2); // вернет 5</span>
+										<span class="d-block text-break my-2">Math.ceil(-4.2); // вернет -4</span>
 									</code>
 									</div>
-								  <p>Массивы могут содержать элементы разных типов, включая другие массивы:</p>
+								  <p>Math.floor(x) - округляет число x до ближайшего меньшего целого. Например:</p>
 								  <div class="container border mb-3">
 									<code class="language-js " data-lang="js">
-										<span class="d-block text-break my-2">let mixedArray = ['apple', 5, true, ['banana', 'cherry']];</span>
+										<span class="d-block text-break my-2">Math.floor(4.2); // вернет 4</span>
+										<span class="d-block text-break my-2">Math.floor(-4.2); // вернет -5</span>
 									</code>
 									</div>
-									<p>Для создания многомерных массивов в JavaScript можно использовать вложенные квадратные скобки. Например, создадим двумерный массив, который будет содержать два вложенных одномерных массива:</p>
+								  <p>Math.max(x1, x2, ..., xn) - возвращает наибольшее число из x1, x2, ..., xn. Например:</p>
 								  <div class="container border mb-3">
 									<code class="language-js " data-lang="js">
-										<span class="d-block text-break my-2">let twoDimensionalArray = [[1, 2, 3], [4, 5, 6]];</span>
+										<span class="d-block text-break my-2">Math.max(10, 20, 30); // вернет 30</span>
 									</code>
 									</div>
-									<p>Обращаться к элементам двумерного массива можно, указывая два индекса: первый индекс указывает на вложенный массив, а второй - на элемент внутри вложенного массива:</p>
+									<p>Math.min(x1, x2, ..., xn) - возвращает наименьшее число из x1, x2, ..., xn. Например:</p>
+								  <div class="container border mb-3">
+									<code class="language-js " data-lang="js">
+										<span class="d-block text-break my-2">Math.min(10, 20, 30); // вернет 10</span>
+									</code>
+									</div>
+									<p>Math.pow(x, y) - возвращает значение x в степени y. Например:</p>
 									<div class="container border mb-3">
 									  <code class="language-js " data-lang="js">
-										  <span class="d-block text-break my-2">console.log(twoDimensionalArray[1][2]); // выведет 6</span>
+										  <span class="d-block text-break my-2">Math.pow(2, 3); // вернет 8</span>
 									  </code>
 									  </div>
-									  <p>Также можно создавать многомерные массивы с большим количеством уровней вложенности.</p>
+									<p>Math.random() - возвращает случайное число от 0 до 1. Например:</p>
+								  <div class="container border mb-3">
+									<code class="language-js " data-lang="js">
+										<span class="d-block text-break my-2">Math.random(); // вернет случайное число от 0 до 1</span>
+									</code>
+									</div>
+									<p>Math.round(x) - округляет число x до ближайшего целого. Например:</p>
+									<div class="container border mb-3">
+									  <code class="language-js " data-lang="js">
+										  <span class="d-block text-break my-2">Math.round(4.2); // вернет 4</span>
+										  <span class="d-block text-break my-2">Math.round(4.7); // вернет 5</span>
+									  </code>
+									  </div>
+									<p>Math.sqrt(x) - возвращает квадратный корень числа x. Например:</p>
+								  <div class="container border mb-3">
+									<code class="language-js " data-lang="js">
+										<span class="d-block text-break my-2">Math.sqrt(16); // вернет 4</span>
+									</code>
+									</div>
 								  <h1 class="h4 font-weight-bold">Практические задания</h1>
-								  <p>1)	Создайте функцию, которая принимает массив чисел и возвращает сумму этих чисел.</p>
-								  <p>2) Создайте функцию, которая принимает два массива чисел и возвращает новый массив, содержащий суммы соответствующих элементов этих массивов.</p>
-								  <p>3) Создайте функцию, которая принимает массив чисел и возвращает новый массив, содержащий только четные числа из исходного массива.</p>
-								  <p>4) Создайте функцию, которая принимает массив строк и возвращает количество строк, содержащих символ 'a'</p>
+								  <p>1)	Напишите функцию, которая вычисляет площадь треугольника по формуле (0.5 * a * h) и возвращает результат. Затем вызовите эту функцию с параметрами a=10 и h=5 и выведите результат в консоль.</p>
+								  <p>2) Напишите функцию, которая генерирует случайное число в диапазоне от min до max и возвращает результат. Затем вызовите эту функцию с параметрами min=1 и max=100 и выведите результат в консоль.</p>
+								  <p>3)	Напишите функцию, которая находит наименьшее число из заданных и возвращает результат. Затем вызовите эту функцию с параметрами 10, 5 и 15 и выведите результат в консоль.</p>
+								  <p>4) Создайте функцию calcCircleArea(radius), которая будет вычислять площадь круга по заданному радиусу. Используйте для этого встроенную функцию Math.PI и Math.pow.</p>
 								  <div class="my-4">
 									  <details class="mt-1 border">
 										<summary class="p-2">Решение задач</summary>
@@ -126,63 +153,44 @@
 										<p>1)</p>
 										<div class="container border mb-3">
 											<code class="language-js " data-lang="js">
-												<span class="d-block text-break my-2">function sumArray(numbers) {</span>
-												<span class="d-block text-break my-2">let sum = 0;</span>
-												<span class="d-block text-break my-2">for (let i = 0; i < numbers.length; i++) {</span>
-												<span class="d-block text-break my-2">sum += numbers[i];</span>
+												<span class="d-block text-break my-2">function calculateTriangleArea(a, h) {</span>
+												<span class="d-block text-break my-2">let area = 0.5 * a * h;</span>
+												<span class="d-block text-break my-2">return area;</span>
 												<span class="d-block text-break my-2">}</span>
-												<span class="d-block text-break my-2">return sum;</span>
-												<span class="d-block text-break my-2">}</span>
-												<span class="d-block text-break my-2">console.log(sumArray([1, 2, 3, 4, 5])); // 15</span>
-												<span class="d-block text-break my-2">console.log(sumArray([-1, 0, 1])); // 0</span>
+												<span class="d-block text-break my-2">let triangleArea = calculateTriangleArea(10, 5);</span>
+												<span class="d-block text-break my-2">console.log("Площадь треугольника равна " + triangleArea);</span>
 										  </code>
 										  </div>
 										  <p>2)</p>
 										  <div class="container border mb-3">
 											<code class="language-js " data-lang="js">
-												<span class="d-block text-break my-2">function sumArrays(arr1, arr2) {</span>
-												<span class="d-block text-break my-2">const result = [];</span>
-												<span class="d-block text-break my-2">for (let i = 0; i < arr1.length; i++) {</span>
-												<span class="d-block text-break my-2">result[i] = arr1[i] + arr2[i];</span>
+												<span class="d-block text-break my-2">function getRandomNumber(min, max) {</span>
+												<span class="d-block text-break my-2">let randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;</span>
+												<span class="d-block text-break my-2">return randomNumber;</span>
 												<span class="d-block text-break my-2">}</span>
-												<span class="d-block text-break my-2">return result;</span>
-												<span class="d-block text-break my-2">}</span>
-												<span class="d-block text-break my-2">console.log(sumArrays([1, 2, 3], [4, 5, 6])); // [5, 7, 9]</span>
-												<span class="d-block text-break my-2">console.log(sumArrays([10, 20], [5, 10])); // [15, 30]</span>
+												<span class="d-block text-break my-2">let number = getRandomNumber(1, 100);</span>
+												<span class="d-block text-break my-2">console.log("Случайное число: " + number);</span>
 										  </code>
 										  </div>
 										  <p>3)</p>
 										  <div class="container border mb-3">
 											<code class="language-js " data-lang="js">
-												<span class="d-block text-break my-2">function filterEvenNumbers(numbers) {</span>
-												<span class="d-block text-break my-2">const result = [];</span>
-												<span class="d-block text-break my-2">let index = 0;</span>
-												<span class="d-block text-break my-2">for (let i = 0; i < numbers.length; i++) {</span>
-												<span class="d-block text-break my-2">if (numbers[i] % 2 === 0) {</span>
-												<span class="d-block text-break my-2">result[index] = numbers[i];</span>
-												<span class="d-block text-break my-2">index++;</span>
+												<span class="d-block text-break my-2">function findSmallestNumber(num1, num2, num3) {</span>
+												<span class="d-block text-break my-2">let smallestNumber = Math.min(num1, num2, num3);</span>
+												<span class="d-block text-break my-2">return smallestNumber;</span>
 												<span class="d-block text-break my-2">}</span>
-												<span class="d-block text-break my-2">}</span>
-												<span class="d-block text-break my-2">return result;</span>
-												<span class="d-block text-break my-2">}</span>
-												<span class="d-block text-break my-2">console.log(filterEvenNumbers([1, 2, 3, 4, 5, 6])); // [2, 4, 6]</span>
-												<span class="d-block text-break my-2">console.log(filterEvenNumbers([-2, -1, 0, 1, 2])); // [-2, 0, 2]</span>
+												<span class="d-block text-break my-2">let smallest = findSmallestNumber(10, 5, 15);</span>
+												<span class="d-block text-break my-2">console.log("Наименьшее число из 10, 5 и 15 равно " + smallest);</span>
 										  </code>
 										  </div>
 										  <p>4)</p>
 										  <div class="container border mb-3">
 											<code class="language-js " data-lang="js">
-												<span class="d-block text-break my-2">function countAStrings(strings) {</span>
-												<span class="d-block text-break my-2">let count = 0;</span>
-												<span class="d-block text-break my-2">for (let i = 0; i < strings.length; i++) {</span>
-												<span class="d-block text-break my-2">if (strings[i].includes('a')) {</span>
-												<span class="d-block text-break my-2">count++;</span>
+												<span class="d-block text-break my-2">function calcCircleArea(radius) {</span>
+												<span class="d-block text-break my-2">return Math.PI * Math.pow(radius,2);</span>
 												<span class="d-block text-break my-2">}</span>
-												<span class="d-block text-break my-2">}</span>
-												<span class="d-block text-break my-2">return count;</span>
-												<span class="d-block text-break my-2">}</span>
-												<span class="d-block text-break my-2">console.log(countAStrings(['apple', 'banana', 'cherry'])); // 2</span>
-												<span class="d-block text-break my-2">console.log(countAStrings(['dog', 'cat', 'fish'])); // 1</span>
+												<span class="d-block text-break my-2">console.log(calcCircleArea(5)); // вернет 78.53981633974483</span>
+												<span class="d-block text-break my-2">console.log(calcCircleArea(10)); // вернет 314.159265358979</span>
 										  </code>
 										  </div>
 										</div>
@@ -196,7 +204,7 @@
 								  </div>
 								  <div class="mb-3 d-flex justify-content-center">
 									<div class="me-4">
-										<a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="jslesson20m.html"><span class="me-2">←</span><span>Предыдущий</span></a>
+										<a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="jslesson20.html"><span class="me-2">←</span><span>Предыдущий</span></a>
 									</div>
 									<a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="jslesson22.html"><span class="me-2">Следующий</span><span>→</span></a>
 								</div>

@@ -4,7 +4,9 @@ const path = require('path')
 module.exports = {
     mode: 'development',
   entry: {main: './src/js/main.js',
-          jscompiler:'./src/js/jscompiler.js'},
+          jscompiler:'./src/js/jscompiler.js',
+          pytcompiler:'./src/js/pytcompiler.js'
+        },
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')

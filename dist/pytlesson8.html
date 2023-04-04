@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Типы данных | Python</title>
+    <title>Операторы присваивания | Python</title>
 	<link type="Image/x-icon" href="images/icon.ico" rel="icon">
 </head>
 <body class="d-flex flex-column ih-100"> 
@@ -47,11 +47,11 @@
 						<li class="list-group-item border-top-0"><a href="pytlesson1.html" id="my-link">Объявление переменных</a></li>
 						<li class="list-group-item"><a href="pytlesson2.html" id="my-link">Присвоение значений переменным</a></li>
 						<li class="list-group-item"><a href="pytlesson3.html" id="my-link">Именование переменных</a></li>
-						<li class="list-group-item">Типы данных</li>
+						<li class="list-group-item"><a href="pytlesson4.html" id="my-link">Типы данных</a></li>
 						<li class="list-group-item"><a href="pytlesson5.html" id="my-link">Арифметические операторы</a></li>
 						<li class="list-group-item"><a href="pytlesson6.html" id="my-link">Операторы сравнения</a></li>
 						<li class="list-group-item"><a href="pytlesson7.html" id="my-link">Логические операторы</a></li>
-						<li class="list-group-item"><a href="pytlesson8.html" id="my-link">Операторы присваивания</a></li>
+						<li class="list-group-item">Операторы присваивания</li>
 						<li class="list-group-item"><a href="pytlesson9.html" id="my-link">Конкатенация</a></li>
 						<li class="list-group-item"><a href="pytlesson10.html" id="my-link">Оператор if</a></li>
 						<li class="list-group-item"><a href="pytlesson11.html" id="my-link">Оператор switch</a></li>
@@ -80,46 +80,49 @@
 						  <div class="card border-0">
 							<div class="card-body">
 								<div class="content">
-								  <h1 class="h3 font-weight-bold">Типы данных</h1>
-								  <p>В Python типы данных также являются фундаментальными строительными блоками языка программирования. В Python существуют следующие примитивные типы данных: целые числа (int), числа с плавающей запятой (float), логические значения (bool), строки (str) и значение None.</p>
-								  <p>Строки в Python также представляют собой текстовые данные и могут заключаться в одинарные, двойные или тройные кавычки. Целые числа могут быть любым целым числом, а числа с плавающей запятой могут быть дробными числами. Логические значения представляют собой True и False, а значение None указывает на отсутствие значения.</p>
-								  <p>Для определения типа переменной в Python можно использовать функцию type(). Она возвращает тип объекта, переданного ей в качестве параметра. Пример:</p>
+								  <h1 class="h3 font-weight-bold">Операторы присваивания</h1>
+								  <p>Операторы присваивания используются в Python для присваивания значений переменным. Некоторые типы операторов присваивания включают простой оператор присваивания (=), оператор присваивания сложения (+=), оператор присваивания вычитания (-=), оператор присваивания умножения (*=), оператор присваивания деления (/=) и оператор присваивания остатка (%=).</p>
+								  <p>Простой оператор присваивания (=) присваивает значение в правой части оператора переменной в левой части.</p>
 								  <div class="container border mb-3">
 									<code class="language-python " data-lang="python">
-									  <span class="d-block text-break my-2">str_var = 'Hello World'</span>
-									  <span class="d-block text-break my-2">int_var = 42</span>
-									  <span class="d-block text-break my-2">float_var = 3.14</span>
-									  <span class="d-block text-break my-2">bool_var = True</span>
-									  <span class="d-block text-break my-2">none_var = None</span>
-									  <span class="d-block text-break my-2">print(type(str_var)) # class 'str'</span>
-									  <span class="d-block text-break my-2">print(type(int_var)) # class 'int'</span>
-									  <span class="d-block text-break my-2">print(type(float_var)) # class 'float'</span>
-									  <span class="d-block text-break my-2">print(type(bool_var)) # class 'bool'</span>
-									  <span class="d-block text-break my-2">print(type(none_var)) # class 'NoneType'</span>
+										<span class="d-block text-break my-2">x = 10 # присваивает значение 10 переменной x</span>
 								  </code>
 								  </div>
-								  <p>В Python объявление переменной и присваивание значения происходит одновременно. Для объявления переменных используется имя переменной, знак равенства и значение переменной. Пример:</p>
+								  <p>Оператор присваивания сложения (+=) добавляет значение в правой части оператора к существующему значению переменной в левой части.</p>
 								  <div class="container border mb-3">
 									<code class="language-python " data-lang="python">
-									  <span class="d-block text-break my-2">num_var = 42</span>
-									  <span class="d-block text-break my-2">str_var = 'Hello World'</span>
-									  <span class="d-block text-break my-2">print(num_var) # 42</span>
-									  <span class="d-block text-break my-2">print(str_var) # 'Hello World'</span>
+										<span class="d-block text-break my-2">x += 5 # добавляет 5 к существующему значению x</span>
 								  </code>
 								  </div>
-								  <p>Для преобразования строки, представляющей число, в числовой тип данных можно использовать функции int() и float(). Они возвращают целое или дробное число соответственно. Пример:</p>
+								  <p>Оператор присваивания вычитания (-=) вычитает значение в правой части оператора из существующего значения переменной в левой части.</p>
 								  <div class="container border mb-3">
 									<code class="language-python " data-lang="python">
-									  <span class="d-block text-break my-2">num_str = '42'</span>
-									  <span class="d-block text-break my-2">num_int = int(num_str)</span>
-									  <span class="d-block text-break my-2">print(num_int, type(num_int)) # 42 class 'int'</span>
+										<span class="d-block text-break my-2">x -= 5 # вычитает 5 из существующего значения x</span>
+								  </code>
+								  </div>
+								  <p>Оператор присваивания умножения (*=) умножает существующее значение переменной в левой части на значение в правой части оператора.</p>
+								  <div class="container border mb-3">
+									<code class="language-python " data-lang="python">
+										<span class="d-block text-break my-2">x *= 2 # умножает существующее значение x на 2</span>
+								  </code>
+								  </div>
+								  <p>Оператор присваивания деления (/=) делит существующее значение переменной в левой части на значение в правой части оператора.</p>
+								  <div class="container border mb-3">
+									<code class="language-python " data-lang="python">
+										<span class="d-block text-break my-2">x /= 2 # делит существующее значение x на 2</span>
+								  </code>
+								  </div>
+								  <p>Оператор присваивания остатка (%=) присваивает остаток от деления существующего значения переменной в левой части на значение в правой части оператора.</p>
+								  <div class="container border mb-3">
+									<code class="language-python " data-lang="python">
+										<span class="d-block text-break my-2">x %= 3 # присваивает остаток от деления x на 3 на x</span>
 								  </code>
 								  </div>
 								  <h1 class="h4 font-weight-bold">Практические задания</h1>
-								  <p>1)	Создайте программу Python, которая объявляет переменную нескольких примитивных типов данных и выводит значение каждой переменной на консоль с помощью функции print().</p>
-								  <p>2) Объявите две переменные: одну числовую и одну строковую. Выведите их значения в консоль.</p>
-								  <p>3) Объявите три переменные: одну с булевым значением, одну с числом и одну с None. Выведите их значения и типы в консоль.</p>
-								  <p>4) Объявите переменную, содержащую строку, которая представляет собой число. Преобразуйте ее в число и выведите в консоль.</p>
+								  <p>1)	Создать переменную и присвоить ей значение. Используя оператор присваивания, добавить к переменной число и вывести результат в консоль.</p>
+								  <p>2) Создать переменную и присвоить ей значение. Используя оператор присваивания, умножить переменную на число и вывести результат в консоль.</p>
+								  <p>3) Создать переменную и присвоить ей значение. Используя оператор присваивания, выполнить операцию деления переменной на число и вывести результат в консоль.</p>
+								  <p>4) Создать переменную и присвоить ей значение. Используя оператор присваивания, выполнить операцию остатка от деления переменной на число и вывести результат в консоль.</p>
 								  <div class="my-4">
 									  <details class="mt-1 border">
 										<summary class="p-2">Решение задач</summary>
@@ -127,45 +130,33 @@
 										<p>1)</p>
 										<div class="container border mb-3">
 											<code class="language-python " data-lang="python">
-											  <span class="d-block text-break my-2">str_var = "Hello, world!"</span>
-											  <span class="d-block text-break my-2">num_var = 42</span>
-											  <span class="d-block text-break my-2">bool_var = True</span>
-											  <span class="d-block text-break my-2">nul_var = None</span>
-											  <span class="d-block text-break my-2">num_var = 42</span>
-											  <span class="d-block text-break my-2">sym_var = 0x1234</span>
-											  <span class="d-block text-break my-2">print(str_var)</span>
-											  <span class="d-block text-break my-2">print(num_var)</span>
-											  <span class="d-block text-break my-2">print(bool_var)</span>
-											  <span class="d-block text-break my-2">print(nul_var)</span>
-											  <span class="d-block text-break my-2">print(sym_var)</span>
+												<span class="d-block text-break my-2">x = 10</span>
+												<span class="d-block text-break my-2">x += 5</span>
+												<span class="d-block text-break my-2">print(x)</span>
 										  </code>
 										  </div>
 										  <p>2)</p>
 										  <div class="container border mb-3">
 											<code class="language-python " data-lang="python">
-											  <span class="d-block text-break my-2">age = 25</span>
-											  <span class="d-block text-break my-2">name = "John"</span>
-											  <span class="d-block text-break my-2">print(age)</span>
-											  <span class="d-block text-break my-2">print(name)</span>
+											  <span class="d-block text-break my-2">y = 7</span>
+											  <span class="d-block text-break my-2">y *= 3</span>
+											  <span class="d-block text-break my-2">print(y)</span>
 										  </code>
 										  </div>
 										  <p>3)</p>
 										  <div class="container border mb-3">
 											<code class="language-python " data-lang="python">
-											  <span class="d-block text-break my-2">is_adult = True</span>
-											  <span class="d-block text-break my-2">count = 10</span>
-											  <span class="d-block text-break my-2">nothing = None</span>
-											  <span class="d-block text-break my-2">print(is_adult, type(is_adult))</span>
-											  <span class="d-block text-break my-2">print(count, type(count))</span>
-											  <span class="d-block text-break my-2">print(nothing, type(nothing))</span>
+											  <span class="d-block text-break my-2">z = 30</span>
+											  <span class="d-block text-break my-2">z /= 6</span>
+											  <span class="d-block text-break my-2">print(z)</span>
 										  </code>
 										  </div>
 										  <p>4)</p>
 										  <div class="container border mb-3">
 											<code class="language-python " data-lang="python">
-											  <span class="d-block text-break my-2">str_number = "123"</span>
-											  <span class="d-block text-break my-2">num = int(str_number)</span>
-											  <span class="d-block text-break my-2">print(num, type(num))</span>
+											  <span class="d-block text-break my-2">a = 23</span>
+											  <span class="d-block text-break my-2">a %= 4</span>
+											  <span class="d-block text-break my-2">print(a)</span>
 										  </code>
 										  </div>
 										</div>
@@ -179,9 +170,9 @@
 								  </div>
 								  <div class="mb-3 d-flex justify-content-center">
 									<div class="me-4">
-										<a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="pytlesson3.html"><span class="me-2">←</span><span>Предыдущий</span></a>
+										<a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="pytlesson7.html"><span class="me-2">←</span><span>Предыдущий</span></a>
 									</div>
-									<a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="pytlesson5.html"><span class="me-2">Следующий</span><span>→</span></a>
+									<a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="pytlesson9.html"><span class="me-2">Следующий</span><span>→</span></a>
 								</div>
 								</div>
 							</div>

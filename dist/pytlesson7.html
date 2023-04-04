@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Типы данных | Python</title>
+    <title>Логические операторы | Python</title>
 	<link type="Image/x-icon" href="images/icon.ico" rel="icon">
 </head>
 <body class="d-flex flex-column ih-100"> 
@@ -47,10 +47,10 @@
 						<li class="list-group-item border-top-0"><a href="pytlesson1.html" id="my-link">Объявление переменных</a></li>
 						<li class="list-group-item"><a href="pytlesson2.html" id="my-link">Присвоение значений переменным</a></li>
 						<li class="list-group-item"><a href="pytlesson3.html" id="my-link">Именование переменных</a></li>
-						<li class="list-group-item">Типы данных</li>
+						<li class="list-group-item"><a href="pytlesson4.html" id="my-link">Типы данных</a></li>
 						<li class="list-group-item"><a href="pytlesson5.html" id="my-link">Арифметические операторы</a></li>
 						<li class="list-group-item"><a href="pytlesson6.html" id="my-link">Операторы сравнения</a></li>
-						<li class="list-group-item"><a href="pytlesson7.html" id="my-link">Логические операторы</a></li>
+						<li class="list-group-item">Логические операторы</li>
 						<li class="list-group-item"><a href="pytlesson8.html" id="my-link">Операторы присваивания</a></li>
 						<li class="list-group-item"><a href="pytlesson9.html" id="my-link">Конкатенация</a></li>
 						<li class="list-group-item"><a href="pytlesson10.html" id="my-link">Оператор if</a></li>
@@ -80,46 +80,41 @@
 						  <div class="card border-0">
 							<div class="card-body">
 								<div class="content">
-								  <h1 class="h3 font-weight-bold">Типы данных</h1>
-								  <p>В Python типы данных также являются фундаментальными строительными блоками языка программирования. В Python существуют следующие примитивные типы данных: целые числа (int), числа с плавающей запятой (float), логические значения (bool), строки (str) и значение None.</p>
-								  <p>Строки в Python также представляют собой текстовые данные и могут заключаться в одинарные, двойные или тройные кавычки. Целые числа могут быть любым целым числом, а числа с плавающей запятой могут быть дробными числами. Логические значения представляют собой True и False, а значение None указывает на отсутствие значения.</p>
-								  <p>Для определения типа переменной в Python можно использовать функцию type(). Она возвращает тип объекта, переданного ей в качестве параметра. Пример:</p>
+								  <h1 class="h3 font-weight-bold">Логические операторы</h1>
+								  <p>Логические операторы используются в программировании для оценки логических выражений вместе с оператором if, результатом которых являются истинные или ложные значения. if - это условный оператор в программировании, который позволяет выполнять определенные действия, только если определенное логическое выражение является истинным. Если выражение ложно, то действия в блоке if будут пропущены. В Python также есть три логических оператора:</p>
+								  <p>and (логическое И): этот оператор возвращает истину, если оба операнда истинны.</p>
 								  <div class="container border mb-3">
 									<code class="language-python " data-lang="python">
-									  <span class="d-block text-break my-2">str_var = 'Hello World'</span>
-									  <span class="d-block text-break my-2">int_var = 42</span>
-									  <span class="d-block text-break my-2">float_var = 3.14</span>
-									  <span class="d-block text-break my-2">bool_var = True</span>
-									  <span class="d-block text-break my-2">none_var = None</span>
-									  <span class="d-block text-break my-2">print(type(str_var)) # class 'str'</span>
-									  <span class="d-block text-break my-2">print(type(int_var)) # class 'int'</span>
-									  <span class="d-block text-break my-2">print(type(float_var)) # class 'float'</span>
-									  <span class="d-block text-break my-2">print(type(bool_var)) # class 'bool'</span>
-									  <span class="d-block text-break my-2">print(type(none_var)) # class 'NoneType'</span>
+										<span class="d-block text-break my-2">x = 10</span>
+										<span class="d-block text-break my-2">y = 20</span>
+										<span class="d-block text-break my-2">if x > 5 and y > 15: print("Оба истинны")</span>
 								  </code>
 								  </div>
-								  <p>В Python объявление переменной и присваивание значения происходит одновременно. Для объявления переменных используется имя переменной, знак равенства и значение переменной. Пример:</p>
+								  <p>В приведенном выше примере код внутри блока if будет выполняться, поскольку оба условия (x > 0 и y > 0) истинны.</p>
+								  <p>or (логическое ИЛИ): этот оператор возвращает истину, если хотя бы один из операндов истинен.</p>
 								  <div class="container border mb-3">
 									<code class="language-python " data-lang="python">
-									  <span class="d-block text-break my-2">num_var = 42</span>
-									  <span class="d-block text-break my-2">str_var = 'Hello World'</span>
-									  <span class="d-block text-break my-2">print(num_var) # 42</span>
-									  <span class="d-block text-break my-2">print(str_var) # 'Hello World'</span>
+										<span class="d-block text-break my-2">x = 10</span>
+										<span class="d-block text-break my-2">y = 20</span>
+										<span class="d-block text-break my-2">if x > 5 or y > 25: print("Один из операндов истинен")</span>
 								  </code>
 								  </div>
-								  <p>Для преобразования строки, представляющей число, в числовой тип данных можно использовать функции int() и float(). Они возвращают целое или дробное число соответственно. Пример:</p>
+								  <p>Оператор ИЛИ (or) возвращает значение True, если хотя бы один из операндов имеет значение True. Если оба операнда ложны, то и все выражение ложно.</p>
+								  <p>not (логическое НЕ): Этот оператор возвращает значение, противоположное логическому значению своего операнда. Если операнд истинен, он возвращает ложь, и наоборот.</p>
 								  <div class="container border mb-3">
 									<code class="language-python " data-lang="python">
-									  <span class="d-block text-break my-2">num_str = '42'</span>
-									  <span class="d-block text-break my-2">num_int = int(num_str)</span>
-									  <span class="d-block text-break my-2">print(num_int, type(num_int)) # 42 class 'int'</span>
+										<span class="d-block text-break my-2">x = 10</span>
+										<span class="d-block text-break my-2">y = 20</span>
+										<span class="d-block text-break my-2">if not x > 15 or not y < 25: print("Значение ложно")</span>
 								  </code>
 								  </div>
+								  <p>В приведенном выше примере код внутри блока if будет выполняться, потому что условие (x > 5 and y < 30) ложно, но оператор not отрицает его, делая его истинным.</p>
+								  <p>Эти операторы обычно используются в условных операторах и циклах для управления потоком выполнения программы.</p>
 								  <h1 class="h4 font-weight-bold">Практические задания</h1>
-								  <p>1)	Создайте программу Python, которая объявляет переменную нескольких примитивных типов данных и выводит значение каждой переменной на консоль с помощью функции print().</p>
-								  <p>2) Объявите две переменные: одну числовую и одну строковую. Выведите их значения в консоль.</p>
-								  <p>3) Объявите три переменные: одну с булевым значением, одну с числом и одну с None. Выведите их значения и типы в консоль.</p>
-								  <p>4) Объявите переменную, содержащую строку, которая представляет собой число. Преобразуйте ее в число и выведите в консоль.</p>
+								  <p>1)	Создайте две переменные, x и y, и присвойте им значения. Используя логический оператор "and", проверьте, что обе переменные больше 0, и выведите в консоль результат.</p>
+								  <p>2) Создайте три переменные, a, b и c, и присвойте им значения. Используя логический оператор "or", проверьте, что хотя бы одна из переменных больше 10, и выведите в консоль результат.</p>
+								  <p>3) Создайте две переменные, isRaining и hasUmbrella, и присвойте им значения. Используя логический оператор "and" и "not", проверьте, что не идти на улицу, если идет дождь и нет зонта, и выведите в консоль результат.</p>
+								  <p>4) Создайте две переменные, age и hasLicense, и присвойте им значения. Используя логический оператор "or" и "not", проверьте, что человек может управлять автомобилем, если ему есть 18 лет или более, или если у него есть водительские права, и выведите в консоль результат.</p>
 								  <div class="my-4">
 									  <details class="mt-1 border">
 										<summary class="p-2">Решение задач</summary>
@@ -127,45 +122,34 @@
 										<p>1)</p>
 										<div class="container border mb-3">
 											<code class="language-python " data-lang="python">
-											  <span class="d-block text-break my-2">str_var = "Hello, world!"</span>
-											  <span class="d-block text-break my-2">num_var = 42</span>
-											  <span class="d-block text-break my-2">bool_var = True</span>
-											  <span class="d-block text-break my-2">nul_var = None</span>
-											  <span class="d-block text-break my-2">num_var = 42</span>
-											  <span class="d-block text-break my-2">sym_var = 0x1234</span>
-											  <span class="d-block text-break my-2">print(str_var)</span>
-											  <span class="d-block text-break my-2">print(num_var)</span>
-											  <span class="d-block text-break my-2">print(bool_var)</span>
-											  <span class="d-block text-break my-2">print(nul_var)</span>
-											  <span class="d-block text-break my-2">print(sym_var)</span>
+											  <span class="d-block text-break my-2">x = 5</span>
+											  <span class="d-block text-break my-2">y = 10</span>
+											  <span class="d-block text-break my-2">if x > 0 and y > 0: print("Оба x и y больше чем 0")</span>
 										  </code>
 										  </div>
 										  <p>2)</p>
 										  <div class="container border mb-3">
 											<code class="language-python " data-lang="python">
-											  <span class="d-block text-break my-2">age = 25</span>
-											  <span class="d-block text-break my-2">name = "John"</span>
-											  <span class="d-block text-break my-2">print(age)</span>
-											  <span class="d-block text-break my-2">print(name)</span>
+											  <span class="d-block text-break my-2">a = 5</span>
+											  <span class="d-block text-break my-2">b = 15</span>
+											  <span class="d-block text-break my-2">c = 3</span>
+											  <span class="d-block text-break my-2">if a > 10 or b > 10 or c > 10: print("Один из операндов больше 10")</span>
 										  </code>
 										  </div>
 										  <p>3)</p>
 										  <div class="container border mb-3">
 											<code class="language-python " data-lang="python">
-											  <span class="d-block text-break my-2">is_adult = True</span>
-											  <span class="d-block text-break my-2">count = 10</span>
-											  <span class="d-block text-break my-2">nothing = None</span>
-											  <span class="d-block text-break my-2">print(is_adult, type(is_adult))</span>
-											  <span class="d-block text-break my-2">print(count, type(count))</span>
-											  <span class="d-block text-break my-2">print(nothing, type(nothing))</span>
+											  <span class="d-block text-break my-2">isRaining = True</span>
+											  <span class="d-block text-break my-2">hasUmbrella = False</span>
+											  <span class="d-block text-break my-2">if isRaining and not hasUmbrella: print("Не выходи на улицу")</span>
 										  </code>
 										  </div>
 										  <p>4)</p>
 										  <div class="container border mb-3">
 											<code class="language-python " data-lang="python">
-											  <span class="d-block text-break my-2">str_number = "123"</span>
-											  <span class="d-block text-break my-2">num = int(str_number)</span>
-											  <span class="d-block text-break my-2">print(num, type(num))</span>
+											  <span class="d-block text-break my-2">age = 20</span>
+											  <span class="d-block text-break my-2">hasLicense = True</span>
+											  <span class="d-block text-break my-2">if age >= 18 or hasLicense: print("Имеет право водить")</span>
 										  </code>
 										  </div>
 										</div>
@@ -179,9 +163,9 @@
 								  </div>
 								  <div class="mb-3 d-flex justify-content-center">
 									<div class="me-4">
-										<a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="pytlesson3.html"><span class="me-2">←</span><span>Предыдущий</span></a>
+										<a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="pytlesson6.html"><span class="me-2">←</span><span>Предыдущий</span></a>
 									</div>
-									<a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="pytlesson5.html"><span class="me-2">Следующий</span><span>→</span></a>
+									<a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="pytlesson8.html"><span class="me-2">Следующий</span><span>→</span></a>
 								</div>
 								</div>
 							</div>

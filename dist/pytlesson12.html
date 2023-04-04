@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Объявление переменных | Python</title>
+    <title>Цикл for | Python</title>
 	<link type="Image/x-icon" href="images/icon.ico" rel="icon">
 </head>
 <body class="d-flex flex-column ih-100"> 
@@ -44,7 +44,7 @@
 						<span class="switchmode fs-5 fw-semibold text-light">Навигация</span>
 					  </a>					  
 					<ol class="list-group list-group-numbered rounded-0 overflow-auto">
-						<li class="list-group-item border-top-0">Объявление переменных</li>
+						<li class="list-group-item border-top-0"><a href="pytlesson1.html" id="my-link">Объявление переменных</a></li>
 						<li class="list-group-item"><a href="pytlesson2.html" id="my-link">Присвоение значений переменным</a></li>
 						<li class="list-group-item"><a href="pytlesson3.html" id="my-link">Именование переменных</a></li>
 						<li class="list-group-item"><a href="pytlesson4.html" id="my-link">Типы данных</a></li>
@@ -55,7 +55,7 @@
 						<li class="list-group-item"><a href="pytlesson9.html" id="my-link">Конкатенация</a></li>
 						<li class="list-group-item"><a href="pytlesson10.html" id="my-link">Оператор if</a></li>
 						<li class="list-group-item"><a href="pytlesson11.html" id="my-link">Тернарный оператор</a></li>
-						<li class="list-group-item"><a href="pytlesson12.html" id="my-link">Цикл for</a></li>
+						<li class="list-group-item">Цикл for</li>
 						<li class="list-group-item"><a href="pytlesson13.html" id="my-link">Цикл while</a></li>
 						<li class="list-group-item"><a href="pytlesson14.html" id="my-link">Обычные функции</a></li>
 						<li class="list-group-item"><a href="pytlesson15.html" id="my-link">Стрелочные функции</a></li>
@@ -76,26 +76,43 @@
 						  <div class="card border-0">
 							<div class="card-body">
 								<div class="content">
-								  <h1 class="h3 font-weight-bold">Объявление переменных</h1>
-								  <p>Переменная в Python - это именованный объект, который используется для хранения и изменения значений данных в процессе выполнения программы. Для объявления переменной в Python не нужно использовать ключевое слово для объявления, такое как "var" в JavaScript. В Python переменные объявляются просто путем присваивания значения переменной. Комментарии обозначаются знаком #. Например:</p>
-										<div class="container border mb-3">
-								  		<code class="language-python" data-lang="python">
-											<span class="d-block text-break my-2">x = 5 # объявление переменной x и присвоение ей значения 5</span>
-											<span class="d-block text-break my-2">y = None # объявление переменной y без начального значения</span>
-										</code>
-										</div>
-									<p>Python не требует объявления типа переменной во время объявления. Тип переменной определяется автоматически во время присваивания значения переменной. Например, если мы присваиваем значение "Hello World" переменной "greeting", то Python автоматически определяет тип переменной как "строка". Нет необходимости явно указывать тип переменной при ее объявлении.</p>
-									<p>Кроме того, в Python нет отдельных ключевых слов для объявления переменных со значениями, которые могут изменяться или не могут изменяться, как "let" и "const" в JavaScript. В Python все переменные могут изменяться после их объявления. Однако есть возможность объявления "констант" в Python, используя все заглавные буквы для имени переменной, чтобы указать, что ее значение не должно изменяться. Например:</p>
-									<div class="container border mb-3">
-										<code class="language-python" data-lang="python">
-										  <span class="d-block text-break my-2">PI = 3.14 # объявление константы PI со значением 3.14</span>
-									  </code>
-									  </div>
+								  <h1 class="h3 font-weight-bold">Цикл for</h1>
+								  <p>Цикл "for" в Python является одним из наиболее распространенных и мощных способов создания циклов. Он позволяет выполнять определенный блок кода заданное количество раз.</p>
+								  <p>Синтаксис цикла "for" выглядит следующим образом:</p>
+								  <div class="container border mb-3">
+									<code class="language-python " data-lang="python">
+										<span class="d-block text-break my-2">for переменная in последовательность:</span>
+										<span class="d-block text-break my-2">&nbsp;# Блок кода</span>
+
+								  </code>
+								  </div>
+								  <p>Здесь "переменная" - это переменная, которая будет хранить текущее значение элемента последовательности на каждой итерации цикла. "Последовательность" - это любой объект, который может быть перебран в цикле, такой как строка, список, кортеж или словарь. Блок кода, написанный после двоеточия и с отступом, будет выполняться каждый раз, когда происходит итерация цикла.</p>
+								  <p>Пример использования цикла "for":</p>
+								  <div class="container border mb-3">
+									<code class="language-python " data-lang="python">
+										<span class="d-block text-break my-2"># Задача: Вывести все числа от 1 до 10</span>
+										<span class="d-block text-break my-2">for i in range(1, 11):</span>
+										<span class="d-block text-break my-2">&nbsp;print(i)</span>
+								  </code>
+								  </div>
+								  <p>В этом примере мы используем цикл "for", чтобы вывести все числа от 1 до 10. Мы используем функцию range(), чтобы создать последовательность от 1 до 10. Переменная "i" на каждой итерации цикла будет хранить текущее значение из последовательности, и мы выводим это значение в консоль с помощью функции print().</p>
+								  <p>Можно использовать цикл "for" для перебора элементов в списке, кортеже или словаре, также можно использовать его для выполнения блока кода заданное количество раз.</p>
+								  <p>Пример практического задания с использованием цикла "for":</p>
+								  <div class="container border mb-3">
+									<code class="language-python " data-lang="python">
+										<span class="d-block text-break my-2"># Вычислить сумму всех чисел от 1 до 10</span>
+										<span class="d-block text-break my-2">sum = 0</span>
+										<span class="d-block text-break my-2">for i in range(1, 11):</span>
+										<span class="d-block text-break my-2">&nbsp;sum += i</span>
+										<span class="d-block text-break my-2">print(sum)</span>
+								  </code>
+								  </div>
+								  <p>В этом примере мы используем цикл "for", чтобы вычислить сумму всех чисел от 1 до 10. Мы создаем переменную "sum" и устанавливаем ее равной 0. Затем мы используем цикл "for", чтобы перебрать числа от 1 до 10 и добавлять их к переменной "sum". Наконец, мы выводим значение переменной "sum" в консоль с помощью функции print().</p>
 								  <h1 class="h4 font-weight-bold">Практические задания</h1>
-								  <p>1)	Напишите программу на Python в интерпретаторе, которая объявляет две переменные и выводит их значения в консоль. Команда для вывода в консоль: print().</p>
-								  <p>2) Объявите переменную "age" и присвойте ей значение вашего возраста. Выведите значение переменной "age" на консоль.</p>
-								  <p>3) Объявите две переменные: "firstName" и "lastName". Присвойте им значения вашего имени и фамилии соответственно. Выведите значения переменных "firstName" и "lastName" на консоль.</p>
-								  <p>4) Объявите переменную "isAdmin" и присвойте ей логическое значение "True", если пользователь имеет права администратора, и "False", если нет. Выведите значение переменной "isAdmin" на консоль.</p>
+								  <p>1)	Используя цикл for, напишите код, который будет выводить в консоль только четные числа от 1 до 20.</p>
+								  <p>2) Используя цикл for, напишите код, который будет выводить в консоль таблицу умножения на 3 от 1 до 10.</p>
+								  <p>3) Используя цикл for, напишите код, который будет выводить в консоль все нечетные числа от 1 до 100 и сумму этих чисел.</p>
+								  <p>4) Используя цикл for, напишите код, который будет переворачивать строку "hello" и выводить результат в консоль.</p>
 								  <div class="my-4">
 									  <details class="mt-1 border">
 										<summary class="p-2">Решение задач</summary>
@@ -103,33 +120,38 @@
 										<p>1)</p>
 										<div class="container border mb-3">
 											<code class="language-python " data-lang="python">
-											  <span class="d-block text-break my-2">x = 5</span>
-											  <span class="d-block text-break my-2">y = 10</span>
-											  <span class="d-block text-break my-2">print(x) # выведет 5 в консоль</span>
-											  <span class="d-block text-break my-2">print(y) # выведет 10 в консоль</span>
+												<span class="d-block text-break my-2">for i in range(1, 21):</span>
+												<span class="d-block text-break my-2">&nbsp;if i % 2 == 0:</span>
+												<span class="d-block text-break my-2">&nbsp;&nbsp;print(i)</span>
 										  </code>
 										  </div>
 										  <p>2)</p>
 										  <div class="container border mb-3">
 											<code class="language-python " data-lang="python">
-											  <span class="d-block text-break my-2">age = 25</span>
-											  <span class="d-block text-break my-2">print(age)</span>
+												<span class="d-block text-break my-2">for i in range(1, 11):</span>
+												<span class="d-block text-break my-2">&nbsp;print(3 * i)</span>
+
 										  </code>
 										  </div>
 										  <p>3)</p>
 										  <div class="container border mb-3">
 											<code class="language-python " data-lang="python">
-											  <span class="d-block text-break my-2">firstName = "John"</span>
-											  <span class="d-block text-break my-2">lastName = "Doe"</span>
-											  <span class="d-block text-break my-2">print(firstName)</span>
-											  <span class="d-block text-break my-2">print(lastName)</span>
+											  <span class="d-block text-break my-2">sum_odd = 0</span>
+											  <span class="d-block text-break my-2">for i in range(1, 101):</span>
+											  <span class="d-block text-break my-2">&nbsp;if i % 2 != 0:</span>
+											  <span class="d-block text-break my-2">&nbsp;&nbsp;print(i)</span>
+											  <span class="d-block text-break my-2">sum_odd += i</span>
+											  <span class="d-block text-break my-2">print("Сумма нечетных чисел: ", sum_odd)</span>
 										  </code>
 										  </div>
 										  <p>4)</p>
 										  <div class="container border mb-3">
 											<code class="language-python " data-lang="python">
-											  <span class="d-block text-break my-2">isAdmin = True</span>
-											  <span class="d-block text-break my-2">print(isAdmin)</span>
+											  <span class="d-block text-break my-2">my_string = "hello"</span>
+											  <span class="d-block text-break my-2">reversed_string = ""</span>
+											  <span class="d-block text-break my-2">for i in range(len(my_string)-1, -1, -1):</span>
+											  <span class="d-block text-break my-2">&nbsp;reversed_string += my_string[i]</span>
+											  <span class="d-block text-break my-2">print(reversed_string)</span>
 										  </code>
 										  </div>
 										</div>
@@ -142,7 +164,11 @@
 									</details>
 								  </div>
 								  <div class="mb-3 d-flex justify-content-center">
-									<div class="me-4"></div><a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="pytlesson2.html"><span class="me-2">Следующий</span><span>→</span></a></div>
+									<div class="me-4">
+										<a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="pytlesson11.html"><span class="me-2">←</span><span>Предыдущий</span></a>
+									</div>
+									<a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="pytlesson13.html"><span class="me-2">Следующий</span><span>→</span></a>
+								</div>
 								</div>
 							</div>
 						  </div>

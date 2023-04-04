@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Объявление переменных | Python</title>
+    <title>Операторы сравнения | Python</title>
 	<link type="Image/x-icon" href="images/icon.ico" rel="icon">
 </head>
 <body class="d-flex flex-column ih-100"> 
@@ -44,12 +44,12 @@
 						<span class="switchmode fs-5 fw-semibold text-light">Навигация</span>
 					  </a>					  
 					<ol class="list-group list-group-numbered rounded-0 overflow-auto">
-						<li class="list-group-item border-top-0">Объявление переменных</li>
+						<li class="list-group-item border-top-0"><a href="pytlesson1.html" id="my-link">Объявление переменных</a></li>
 						<li class="list-group-item"><a href="pytlesson2.html" id="my-link">Присвоение значений переменным</a></li>
 						<li class="list-group-item"><a href="pytlesson3.html" id="my-link">Именование переменных</a></li>
 						<li class="list-group-item"><a href="pytlesson4.html" id="my-link">Типы данных</a></li>
 						<li class="list-group-item"><a href="pytlesson5.html" id="my-link">Арифметические операторы</a></li>
-						<li class="list-group-item"><a href="pytlesson6.html" id="my-link">Операторы сравнения</a></li>
+						<li class="list-group-item">Операторы сравнения</li>
 						<li class="list-group-item"><a href="pytlesson7.html" id="my-link">Логические операторы</a></li>
 						<li class="list-group-item"><a href="pytlesson8.html" id="my-link">Операторы присваивания</a></li>
 						<li class="list-group-item"><a href="pytlesson9.html" id="my-link">Операторы инкремента и декремента</a></li>
@@ -81,26 +81,31 @@
 						  <div class="card border-0">
 							<div class="card-body">
 								<div class="content">
-								  <h1 class="h3 font-weight-bold">Объявление переменных</h1>
-								  <p>Переменная в Python - это именованный объект, который используется для хранения и изменения значений данных в процессе выполнения программы. Для объявления переменной в Python не нужно использовать ключевое слово для объявления, такое как "var" в JavaScript. В Python переменные объявляются просто путем присваивания значения переменной. Комментарии обозначаются знаком #. Например:</p>
-										<div class="container border mb-3">
-								  		<code class="language-python" data-lang="python">
-											<span class="d-block text-break my-2">x = 5 # объявление переменной x и присвоение ей значения 5</span>
-											<span class="d-block text-break my-2">y = None # объявление переменной y без начального значения</span>
-										</code>
-										</div>
-									<p>Python не требует объявления типа переменной во время объявления. Тип переменной определяется автоматически во время присваивания значения переменной. Например, если мы присваиваем значение "Hello World" переменной "greeting", то Python автоматически определяет тип переменной как "строка". Нет необходимости явно указывать тип переменной при ее объявлении.</p>
-									<p>Кроме того, в Python нет отдельных ключевых слов для объявления переменных со значениями, которые могут изменяться или не могут изменяться, как "let" и "const" в JavaScript. В Python все переменные могут изменяться после их объявления. Однако есть возможность объявления "констант" в Python, используя все заглавные буквы для имени переменной, чтобы указать, что ее значение не должно изменяться. Например:</p>
-									<div class="container border mb-3">
-										<code class="language-python" data-lang="python">
-										  <span class="d-block text-break my-2">PI = 3.14 # объявление константы PI со значением 3.14</span>
-									  </code>
-									  </div>
+								  <h1 class="h3 font-weight-bold">Операторы сравнения</h1>
+								  <p>В Python также есть операторы сравнения, которые используются для сравнения двух значений и возврата логического значения, указывающего, является ли сравнение истинным или ложным. Python поддерживает те же операторы сравнения, что и JavaScript, включая оператор равенства (==), оператор не равенства (!=), оператор строгого равенства (===), оператор строгого не равенства (!==), оператор «больше» (>), оператор «больше или равно» (>=), оператор «меньше» (<) и оператор «меньше или равно» (<=).</p>
+								  <p>Вот примеры использования операторов сравнения в Python:</p>
+								  <div class="container border mb-3">
+									<code class="language-python " data-lang="python">
+										<span class="d-block text-break my-2">x = 10;</span>
+										<span class="d-block text-break my-2">y = 5</span>
+										<span class="d-block text-break my-2">print(x == y)</span>
+										<span class="d-block text-break my-2">print(x != y)</span>
+										<span class="d-block text-break my-2">print(x > y)</span>
+										<span class="d-block text-break my-2">print(x >= y)</span>
+										<span class="d-block text-break my-2">print(x < y)</span>
+										<span class="d-block text-break my-2">print(x <= y)</span>
+										<span class="d-block text-break my-2">print(x is y)</span>
+										<span class="d-block text-break my-2">print(x is not y)</span>
+								  </code>
+								  </div>
+								  <p>Оператор равенства (==) сравнивает два значения на предмет равенства, а оператор не равно (!=) сравнивает два значения на предмет неравенства. Оператор строгого равенства (===) и оператор строгого не равенства (!==) также сравнивают два значения на равенство, но они выполняют более строгое сравнение, которое проверяет равенство значений и типов.</p>
+								  <p>Оператор «больше» (>) проверяет, больше ли одно значение другого, а оператор «больше или равно» (>=) проверяет, больше ли одно значение другого или равно ему. Оператор «меньше» (<) проверяет, меньше ли одно значение другого, а оператор «меньше или равно» (<=) проверяет, меньше ли одно значение другого или равно ему.</p>
+								  <p>Операторы сравнения обычно используются в условных операторах, таких как операторы if-else, для управления потоком программы на основе результата сравнения.</p>
 								  <h1 class="h4 font-weight-bold">Практические задания</h1>
-								  <p>1)	Напишите программу на Python в интерпретаторе, которая объявляет две переменные и выводит их значения в консоль. Команда для вывода в консоль: print().</p>
-								  <p>2) Объявите переменную "age" и присвойте ей значение вашего возраста. Выведите значение переменной "age" на консоль.</p>
-								  <p>3) Объявите две переменные: "firstName" и "lastName". Присвойте им значения вашего имени и фамилии соответственно. Выведите значения переменных "firstName" и "lastName" на консоль.</p>
-								  <p>4) Объявите переменную "isAdmin" и присвойте ей логическое значение "True", если пользователь имеет права администратора, и "False", если нет. Выведите значение переменной "isAdmin" на консоль.</p>
+								  <p>1)	Сравните два числа и проверьте, больше ли первое число второго числа.</p>
+								  <p>2) Сравните две строки и проверьте, равны ли они.</p>
+								  <p>3) Сравните число и строку и проверьте, равны ли они.</p>
+								  <p>4) Сравните число и строку и проверьте, не равны ли они.</p>
 								  <div class="my-4">
 									  <details class="mt-1 border">
 										<summary class="p-2">Решение задач</summary>
@@ -108,33 +113,33 @@
 										<p>1)</p>
 										<div class="container border mb-3">
 											<code class="language-python " data-lang="python">
-											  <span class="d-block text-break my-2">x = 5</span>
-											  <span class="d-block text-break my-2">y = 10</span>
-											  <span class="d-block text-break my-2">print(x) # выведет 5 в консоль</span>
-											  <span class="d-block text-break my-2">print(y) # выведет 10 в консоль</span>
+											  <span class="d-block text-break my-2">x = 10</span>
+											  <span class="d-block text-break my-2">y = 5</span>
+											  <span class="d-block text-break my-2">print(x > y)</span>
 										  </code>
 										  </div>
 										  <p>2)</p>
 										  <div class="container border mb-3">
 											<code class="language-python " data-lang="python">
-											  <span class="d-block text-break my-2">age = 25</span>
-											  <span class="d-block text-break my-2">print(age)</span>
+											  <span class="d-block text-break my-2">string1 = "hello"</span>
+											  <span class="d-block text-break my-2">string2 = "world"</span>
+											  <span class="d-block text-break my-2">print(string1 == string2)</span>
 										  </code>
 										  </div>
 										  <p>3)</p>
 										  <div class="container border mb-3">
 											<code class="language-python " data-lang="python">
-											  <span class="d-block text-break my-2">firstName = "John"</span>
-											  <span class="d-block text-break my-2">lastName = "Doe"</span>
-											  <span class="d-block text-break my-2">print(firstName)</span>
-											  <span class="d-block text-break my-2">print(lastName)</span>
+											  <span class="d-block text-break my-2">number = 10</span>
+											  <span class="d-block text-break my-2">string = "10"</span>
+											  <span class="d-block text-break my-2">print(number == int(string))</span>
 										  </code>
 										  </div>
 										  <p>4)</p>
 										  <div class="container border mb-3">
 											<code class="language-python " data-lang="python">
-											  <span class="d-block text-break my-2">isAdmin = True</span>
-											  <span class="d-block text-break my-2">print(isAdmin)</span>
+											  <span class="d-block text-break my-2">number = 10</span>
+											  <span class="d-block text-break my-2">string = "5"</span>
+											  <span class="d-block text-break my-2">print(number != int(string))</span>
 										  </code>
 										  </div>
 										</div>
@@ -147,7 +152,11 @@
 									</details>
 								  </div>
 								  <div class="mb-3 d-flex justify-content-center">
-									<div class="me-4"></div><a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="pytlesson2.html"><span class="me-2">Следующий</span><span>→</span></a></div>
+									<div class="me-4">
+										<a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="pytlesson5.html"><span class="me-2">←</span><span>Предыдущий</span></a>
+									</div>
+									<a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="pytlesson7.html"><span class="me-2">Следующий</span><span>→</span></a>
+								</div>
 								</div>
 							</div>
 						  </div>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Объявление переменных | Python</title>
+    <title>Арифметические операторы | Python</title>
 	<link type="Image/x-icon" href="images/icon.ico" rel="icon">
 </head>
 <body class="d-flex flex-column ih-100"> 
@@ -44,11 +44,11 @@
 						<span class="switchmode fs-5 fw-semibold text-light">Навигация</span>
 					  </a>					  
 					<ol class="list-group list-group-numbered rounded-0 overflow-auto">
-						<li class="list-group-item border-top-0">Объявление переменных</li>
+						<li class="list-group-item border-top-0"><a href="pytlesson1.html" id="my-link">Объявление переменных</a></li>
 						<li class="list-group-item"><a href="pytlesson2.html" id="my-link">Присвоение значений переменным</a></li>
 						<li class="list-group-item"><a href="pytlesson3.html" id="my-link">Именование переменных</a></li>
 						<li class="list-group-item"><a href="pytlesson4.html" id="my-link">Типы данных</a></li>
-						<li class="list-group-item"><a href="pytlesson5.html" id="my-link">Арифметические операторы</a></li>
+						<li class="list-group-item">Арифметические операторы</li>
 						<li class="list-group-item"><a href="pytlesson6.html" id="my-link">Операторы сравнения</a></li>
 						<li class="list-group-item"><a href="pytlesson7.html" id="my-link">Логические операторы</a></li>
 						<li class="list-group-item"><a href="pytlesson8.html" id="my-link">Операторы присваивания</a></li>
@@ -81,26 +81,26 @@
 						  <div class="card border-0">
 							<div class="card-body">
 								<div class="content">
-								  <h1 class="h3 font-weight-bold">Объявление переменных</h1>
-								  <p>Переменная в Python - это именованный объект, который используется для хранения и изменения значений данных в процессе выполнения программы. Для объявления переменной в Python не нужно использовать ключевое слово для объявления, такое как "var" в JavaScript. В Python переменные объявляются просто путем присваивания значения переменной. Комментарии обозначаются знаком #. Например:</p>
-										<div class="container border mb-3">
-								  		<code class="language-python" data-lang="python">
-											<span class="d-block text-break my-2">x = 5 # объявление переменной x и присвоение ей значения 5</span>
-											<span class="d-block text-break my-2">y = None # объявление переменной y без начального значения</span>
-										</code>
-										</div>
-									<p>Python не требует объявления типа переменной во время объявления. Тип переменной определяется автоматически во время присваивания значения переменной. Например, если мы присваиваем значение "Hello World" переменной "greeting", то Python автоматически определяет тип переменной как "строка". Нет необходимости явно указывать тип переменной при ее объявлении.</p>
-									<p>Кроме того, в Python нет отдельных ключевых слов для объявления переменных со значениями, которые могут изменяться или не могут изменяться, как "let" и "const" в JavaScript. В Python все переменные могут изменяться после их объявления. Однако есть возможность объявления "констант" в Python, используя все заглавные буквы для имени переменной, чтобы указать, что ее значение не должно изменяться. Например:</p>
-									<div class="container border mb-3">
-										<code class="language-python" data-lang="python">
-										  <span class="d-block text-break my-2">PI = 3.14 # объявление константы PI со значением 3.14</span>
-									  </code>
-									  </div>
+								  <h1 class="h3 font-weight-bold">Арифметические операторы</h1>
+								  <p>В Python арифметические операторы используются для выполнения математических операций над числовыми значениями. Python поддерживает следующие арифметические операторы: сложение (+), вычитание (-), умножение (*), деление (/) и модуль (%).</p>
+								  <p>Оператор сложения (+) используется для сложения двух или более чисел. Если одно или оба значения являются строками, оператор выполняет конкатенацию, объединяя строки вместе. Оператор вычитания (-) используется для вычитания одного числа из другого. Оператор умножения (*) используется для умножения двух или более чисел. Оператор деления (/) используется для деления одного числа на другое. Если числа не делятся без остатка, результатом будет число с плавающей запятой. Оператор модуля (%) используется для нахождения остатка от операции деления.</p>
+								  <div class="container border mb-3">
+									<code class="language-python " data-lang="python">
+										<span class="d-block text-break my-2">let x = 10;</span>
+										<span class="d-block text-break my-2">let y = 2;</span>
+										<span class="d-block text-break my-2">print(x+y) # 12</span>
+										<span class="d-block text-break my-2">print(x-y) # 8</span>
+										<span class="d-block text-break my-2">print(x*y) # 20</span>
+										<span class="d-block text-break my-2">print(x/y) # 5.0</span>
+										<span class="d-block text-break my-2">print(x%y) # 0</span>
+								  </code>
+								  </div>
+								  <p>В Python существует набор правил приоритета операторов, который определяет порядок выполнения операций. Чтобы убедиться, что выражения оцениваются правильно, можно использовать круглые скобки для группировки операций и переопределения приоритета операций по умолчанию.</p>
 								  <h1 class="h4 font-weight-bold">Практические задания</h1>
-								  <p>1)	Напишите программу на Python в интерпретаторе, которая объявляет две переменные и выводит их значения в консоль. Команда для вывода в консоль: print().</p>
-								  <p>2) Объявите переменную "age" и присвойте ей значение вашего возраста. Выведите значение переменной "age" на консоль.</p>
-								  <p>3) Объявите две переменные: "firstName" и "lastName". Присвойте им значения вашего имени и фамилии соответственно. Выведите значения переменных "firstName" и "lastName" на консоль.</p>
-								  <p>4) Объявите переменную "isAdmin" и присвойте ей логическое значение "True", если пользователь имеет права администратора, и "False", если нет. Выведите значение переменной "isAdmin" на консоль.</p>
+								  <p>1)	Создайте переменную x, присвойте ей значение 7. Напишите код, который увеличивает значение переменной x на 3 и выводит результат в консоль.</p>
+								  <p>2) Напишите программу, которая выводит в консоль остаток от деления суммы двух чисел на 10.</p>
+								  <p>3) Создайте программу, которая вычисляет остаток от деления суммы чисел 15 и 7 на число 3 и выводит результат в консоль.</p>
+								  <p>4) Создайте программу, которая вычисляет среднее арифметическое двух чисел: 15 и 25. Результат выведите в консоль.</p>
 								  <div class="my-4">
 									  <details class="mt-1 border">
 										<summary class="p-2">Решение задач</summary>
@@ -108,33 +108,37 @@
 										<p>1)</p>
 										<div class="container border mb-3">
 											<code class="language-python " data-lang="python">
-											  <span class="d-block text-break my-2">x = 5</span>
-											  <span class="d-block text-break my-2">y = 10</span>
-											  <span class="d-block text-break my-2">print(x) # выведет 5 в консоль</span>
-											  <span class="d-block text-break my-2">print(y) # выведет 10 в консоль</span>
+											  <span class="d-block text-break my-2">x = 7</span>
+											  <span class="d-block text-break my-2">x = x + 3</span>
+											  <span class="d-block text-break my-2">print(x) # 10</span>
 										  </code>
 										  </div>
 										  <p>2)</p>
 										  <div class="container border mb-3">
 											<code class="language-python " data-lang="python">
-											  <span class="d-block text-break my-2">age = 25</span>
-											  <span class="d-block text-break my-2">print(age)</span>
+											  <span class="d-block text-break my-2">x = 7</span>
+											  <span class="d-block text-break my-2">y = 3</span>
+											  <span class="d-block text-break my-2">remainder = (x + y) % 10</span>
+											  <span class="d-block text-break my-2">print(remainder) # 0</span>
 										  </code>
 										  </div>
 										  <p>3)</p>
 										  <div class="container border mb-3">
 											<code class="language-python " data-lang="python">
-											  <span class="d-block text-break my-2">firstName = "John"</span>
-											  <span class="d-block text-break my-2">lastName = "Doe"</span>
-											  <span class="d-block text-break my-2">print(firstName)</span>
-											  <span class="d-block text-break my-2">print(lastName)</span>
+											  <span class="d-block text-break my-2">a = 15</span>
+											  <span class="d-block text-break my-2">b = 7</span>
+											  <span class="d-block text-break my-2">n = 3</span>
+											  <span class="d-block text-break my-2">remainder = (a + b) % n</span>
+											  <span class="d-block text-break my-2">print(remainder) # 1</span>
 										  </code>
 										  </div>
 										  <p>4)</p>
 										  <div class="container border mb-3">
 											<code class="language-python " data-lang="python">
-											  <span class="d-block text-break my-2">isAdmin = True</span>
-											  <span class="d-block text-break my-2">print(isAdmin)</span>
+											  <span class="d-block text-break my-2">a = 15</span>
+											  <span class="d-block text-break my-2">b = 25</span>
+											  <span class="d-block text-break my-2">avg = (a + b) / 2</span>
+											  <span class="d-block text-break my-2">print(avg) # 20.0</span>
 										  </code>
 										  </div>
 										</div>
@@ -147,7 +151,11 @@
 									</details>
 								  </div>
 								  <div class="mb-3 d-flex justify-content-center">
-									<div class="me-4"></div><a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="pytlesson2.html"><span class="me-2">Следующий</span><span>→</span></a></div>
+									<div class="me-4">
+										<a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="pytlesson4.html"><span class="me-2">←</span><span>Предыдущий</span></a>
+									</div>
+									<a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="pytlesson6.html"><span class="me-2">Следующий</span><span>→</span></a>
+								</div>
 								</div>
 							</div>
 						  </div>

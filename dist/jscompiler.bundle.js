@@ -19,13 +19,23 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!\n * jQ
 
 /***/ }),
 
+/***/ "./src/js/config.js":
+/*!**************************!*\
+  !*** ./src/js/config.js ***!
+  \**************************/
+/***/ ((module) => {
+
+eval("module.exports = {\r\n  clientId: \"742b01ca46184019124a1ea2864d045e\",\r\n  clientSecret: \"f484e2233808aa0144c4b258f9d661d737369b1566b7ede697e836ebd7217f32\"\r\n};\n\n//# sourceURL=webpack://my-project/./src/js/config.js?");
+
+/***/ }),
+
 /***/ "./src/js/jscompiler.js":
 /*!******************************!*\
   !*** ./src/js/jscompiler.js ***!
   \******************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("var $ = __webpack_require__( /*! jquery */ \"./node_modules/jquery/dist/jquery.js\" );\r\n\r\n$(function() {\r\n    $('#compile-btn').click(function(event) {\r\n      event.preventDefault();\r\n      var code = $('#code-input').val();\r\n      var program = {\r\n        script : code,\r\n        language: \"nodejs\",\r\n        versionIndex: \"0\",\r\n        clientId: \"742b01ca46184019124a1ea2864d045e\",\r\n        clientSecret:\"f484e2233808aa0144c4b258f9d661d737369b1566b7ede697e836ebd7217f32\"\r\n      };\r\n      $.ajax({\r\n        url: 'https://api.jdoodle.com/v1/execute',\r\n        type: 'POST',\r\n        data: JSON.stringify(program),\r\n        contentType: 'application/json',\r\n        success: function(result) {\r\n          $('#output').text(result.output);\r\n        },\r\n        error: function(error) {\r\n          $('#output').text('Error: ' + error.responseText);\r\n        }\r\n      });\r\n    });\r\n  });\n\n//# sourceURL=webpack://my-project/./src/js/jscompiler.js?");
+eval("var $ = __webpack_require__( /*! jquery */ \"./node_modules/jquery/dist/jquery.js\" );\r\nvar config = __webpack_require__(/*! ./config */ \"./src/js/config.js\");\r\n\r\n$(function() {\r\n  $('#compile-btn').click(function(event) {\r\n    event.preventDefault();\r\n    var code = $('#code-input').val();\r\n    var program = {\r\n      script : code,\r\n      language: \"nodejs\",\r\n      versionIndex: \"0\",\r\n      clientId: config.clientId,\r\n      clientSecret: config.clientSecret\r\n    };\r\n    $.ajax({\r\n      url: 'https://api.jdoodle.com/v1/execute',\r\n      type: 'POST',\r\n      data: JSON.stringify(program),\r\n      contentType: 'application/json',\r\n      success: function(result) {\r\n        $('#output').text(result.output);\r\n      },\r\n      error: function(error) {\r\n        $('#output').text('Error: ' + error.responseText);\r\n      }\r\n    });\r\n  });\r\n});\n\n//# sourceURL=webpack://my-project/./src/js/jscompiler.js?");
 
 /***/ })
 

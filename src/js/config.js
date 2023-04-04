@@ -1,0 +1,4 @@
+module.exports = {
+  clientId: "742b01ca46184019124a1ea2864d045e",
+  clientSecret: "f484e2233808aa0144c4b258f9d661d737369b1566b7ede697e836ebd7217f32"
+};

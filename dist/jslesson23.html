@@ -154,8 +154,8 @@
 								  <h1 class="h4 font-weight-bold">Практические задания</h1>
 								  <p>1)	Используя метод filter() и цикл for, создайте новый массив, содержащий только положительные числа из данного массива.</p>
 								  <p>2) Используя метод map(), создайте новый массив, содержащий квадраты чисел из данного массива.</p>
-								  <p>3) Используя метод slice(), создайте новый массив, содержащий элементы данного массива, начиная с индекса 2 и заканчивая индексом 4.</p>
-								  <p>4) Используя метод slice(), выведите на консоль каждую строку данного массива, написанную в обратном порядке.</p>
+								  <p>3) Используя метод slice(), выведите на консоль каждую строку данного массива, написанную в обратном порядке.</p>
+								  <p>4) Напишите программу, которая сначала создает массив из трех цветов - "красный", "зеленый", "синий". Затем используя метод splice() добавляет в массив на позицию 1 цвет "желтый", Удаляет элемент на позиции 2, Заменяет элемент на позиции 0 на "черный". После каждой операции выводите массив на консоль для проверки.</p>
 								  <div class="my-4">
 									  <details class="mt-1 border">
 										<summary class="p-2">Решение задач</summary>
@@ -186,19 +186,27 @@
 										  <p>3)</p>
 										  <div class="container border mb-3">
 											<code class="language-js " data-lang="js">
-												<span class="d-block text-break my-2">const numbers = [1, 2, 3, 4, 5];</span>
-												<span class="d-block text-break my-2">const slicedNumbers = numbers.slice(2, 5);</span>
-												<span class="d-block text-break my-2">console.log(slicedNumbers); // Output: [3, 4, 5]</span>
-										  </code>
-										  </div>
-										  <p>4)</p>
-										  <div class="container border mb-3">
-											<code class="language-js " data-lang="js">
 												<span class="d-block text-break my-2">const strings = ["apple", "banana", "orange", "pear", "pineapple"];</span>
 												<span class="d-block text-break my-2">strings.forEach(function(string) {</span>
 												<span class="d-block text-break my-2">const reversedString = string.split("").reverse().join("");</span>
 												<span class="d-block text-break my-2">console.log(reversedString);</span>
 												<span class="d-block text-break my-2">});</span>
+										  </code>
+										  </div>
+										  <p>4)</p>
+										  <div class="container border mb-3">
+											<code class="language-js " data-lang="js">
+												<span class="d-block text-break my-2">let fruits = ["apple", "banana", "orange"];</span>
+												<span class="d-block text-break my-2">console.log("Исходный массив: ", fruits);</span>
+												<span class="d-block text-break my-2">// Добавляем элементы в массив с помощью splice()</span>
+												<span class="d-block text-break my-2">fruits.splice(1, 1, "grape", "melon");</span>
+												<span class="d-block text-break my-2">console.log("Массив после добавления элементов: ", fruits);</span>
+												<span class="d-block text-break my-2">// Удаляем элементы из массива с помощью splice()</span>
+												<span class="d-block text-break my-2">fruits.splice(2, 2);</span>
+												<span class="d-block text-break my-2">console.log("Массив после удаления элементов: ", fruits);</span>
+												<span class="d-block text-break my-2">// Заменяем элементы в массиве с помощью splice()</span>
+												<span class="d-block text-break my-2">fruits.splice(0, 2, "pear", "kiwi");</span>
+												<span class="d-block text-break my-2">console.log("Массив после замены элементов: ", fruits);</span>
 										  </code>
 										  </div>
 										</div>

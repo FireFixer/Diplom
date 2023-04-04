@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru" class="ih-100" data-bs-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Методы списков | Python</title>
+	<link type="Image/x-icon" href="images/icon.ico" rel="icon">
+</head>
+<body class="d-flex flex-column ih-100"> 
+	<header class="container-fluid text-light beta mb-2 border-bottom">
+		<div class="navbar navbar-expand-md navbar-light">
+		  <div class="container-fluid">
+			<div class="nav-item me-3"> 
+				<a href="index.html" class="text-decoration-none">
+					<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-house-door-fill text-reset" viewBox="0 0 16 16">
+				  <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z"/>
+				</svg>
+			  </a>            
+			</div>
+			<div class="collapse navbar-collapse">
+			  <ul class="navbar-nav me-auto">
+				<li class="nav-item dropdown me-2">
+				  <a aria-expanded="false" aria-haspopup="true" class="nav-link text-light dropdown-toggle" data-bs-toggle="dropdown" href="#">Курсы</a>
+				  <ul class="dropdown-menu dropdown-menu-columns dropdown-menu-arrow">
+					<li><a class="dropdown-item" href="frontjs.html"><span class="switchmode">JavaScript</span></a></li>
+					<li><a class="dropdown-item" href="frontpython.html"><span class="switchmode">Python</span></a></li>
+				  </ul>
+				</li>
+				<a href="about.html" class="nav-link text-light">О проекте</a>
+			  </ul>
+			  <div class="form-check form-switch">
+				<input class="form-check-input" type="checkbox" id="darkSwitch">
+				<label class="form-check-label" for="darkSwitch">Light</label>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		</header>
+	<main class="container-fluid overflow-auto ih-100 mb-1">
+		<div class="row ih-100 g-2">
+			<div class="col-12 ih-100 col-lg-2 col-md-2 mb-3 mb-md-0 position-relative">
+				<div class="d-flex flex-column ih-100 align-items-stretch flex-shrink-0">
+					<a href="./frontpython.html" class="d-flex flex-shrink-0 p-3 link-dark text-decoration-none border align-items-center justify-content-center">
+						<span class="switchmode fs-5 fw-semibold text-light">Навигация</span>
+					  </a>					  
+					<ol class="list-group list-group-numbered rounded-0 overflow-auto">
+						<li class="list-group-item border-top-0"><a href="pytlesson1.html" id="my-link">Объявление переменных</a></li>
+						<li class="list-group-item"><a href="pytlesson2.html" id="my-link">Присвоение значений переменным</a></li>
+						<li class="list-group-item"><a href="pytlesson3.html" id="my-link">Именование переменных</a></li>
+						<li class="list-group-item"><a href="pytlesson4.html" id="my-link">Типы данных</a></li>
+						<li class="list-group-item"><a href="pytlesson5.html" id="my-link">Арифметические операторы</a></li>
+						<li class="list-group-item"><a href="pytlesson6.html" id="my-link">Операторы сравнения</a></li>
+						<li class="list-group-item"><a href="pytlesson7.html" id="my-link">Логические операторы</a></li>
+						<li class="list-group-item"><a href="pytlesson8.html" id="my-link">Операторы присваивания</a></li>
+						<li class="list-group-item"><a href="pytlesson9.html" id="my-link">Конкатенация</a></li>
+						<li class="list-group-item"><a href="pytlesson10.html" id="my-link">Оператор if</a></li>
+						<li class="list-group-item"><a href="pytlesson11.html" id="my-link">Тернарный оператор</a></li>
+						<li class="list-group-item"><a href="pytlesson12.html" id="my-link">Цикл for</a></li>
+						<li class="list-group-item"><a href="pytlesson13.html" id="my-link">Цикл while</a></li>
+						<li class="list-group-item"><a href="pytlesson14.html" id="my-link">Обычные функции</a></li>
+						<li class="list-group-item"><a href="pytlesson15.html" id="my-link">Лямбда-функции</a></li>
+						<li class="list-group-item"><a href="pytlesson16.html" id="my-link">Математические функции и методы</a></li>
+						<li class="list-group-item"><a href="pytlesson17.html" id="my-link">Создание списков</a></li>
+						<li class="list-group-item">Методы списков</li>
+						<li class="list-group-item"><a href="pytlesson19.html" id="my-link">Объекты</a></li>
+						<li class="list-group-item"><a href="pytlesson20.html" id="my-link">Практические задания: Часть 1</a></li>
+						<li class="list-group-item"><a href="pytlesson21.html" id="my-link">Практические задания: Часть 2</a></li>
+					  </ol>
+				</div>
+		  		</div>
+				<div class="col-12 ih-100 col-lg-5 col-md-5 mb-3 mb-md-0 position-relative">
+					<div class="card rounded-0 ih-100 switchmode text-light">
+						<div class="nav nav-tabs justify-content-center small">
+						  <div class="nav-link active border-top-0 rounded-0 border-bottom">Урок</div>
+						</div>
+					  <div class="tab-content overflow-hidden ih-100">
+						<div class="tab-pane fade overflow-auto active show ih-100">
+						  <div class="card border-0">
+							<div class="card-body">
+								<div class="content">
+								  <h1 class="h3 font-weight-bold">Методы списков</h1>
+								  <p>В Python есть встроенные функции для работы со списками, которые позволяют изменять и манипулировать элементами списков. Они могут использоваться для добавления и удаления элементов списка, сортировки элементов, изменения элементов и многого другого.</p>
+								  <p>Некоторые из наиболее распространенных методов списков:</p>
+								  <p>append(): добавляет один элемент в конец списка.</p>
+								  <div class="container border mb-3">
+									<code class="language-python " data-lang="python">
+										<span class="d-block text-break my-2">fruits = ["apple", "banana"]</span>
+										<span class="d-block text-break my-2">fruits.append("orange")</span>
+										<span class="d-block text-break my-2">print(fruits) # ["apple", "banana", "orange"]</span>
+								  </code>
+								  </div>
+								  <p>pop(): удаляет последний элемент из списка и возвращает его.</p>
+								  <div class="container border mb-3">
+									<code class="language-python " data-lang="python">
+										<span class="d-block text-break my-2">fruits = ["apple", "banana", "orange"]</span>
+										<span class="d-block text-break my-2">removed_fruit = fruits.pop()</span>
+										<span class="d-block text-break my-2">print(removed_fruit) # "orange"</span>
+										<span class="d-block text-break my-2">print(fruits) # ["apple", "banana"]</span>
+								  </code>
+								  </div>
+								  <p>filter(): возвращает новый список, содержащий только те элементы исходного списка, которые соответствуют заданному условию.</p>
+								  <div class="container border mb-3">
+									<code class="language-python " data-lang="python">
+										<span class="d-block text-break my-2">numbers = [1, 2, 3, 4, 5, 6]</span>
+										<span class="d-block text-break my-2">even_numbers = list(filter(lambda x: x % 2 == 0, numbers))</span>
+										<span class="d-block text-break my-2">print(even_numbers) # [2, 4, 6]</span>
+								  </code>
+								  </div>
+								  <p>map(): возвращает новый список, содержащий результаты применения заданной функции к каждому элементу исходного списка.</p>
+								  <div class="container border mb-3">
+									<code class="language-python " data-lang="python">
+										<span class="d-block text-break my-2">numbers = [1, 2, 3, 4, 5]</span>
+										<span class="d-block text-break my-2">doubled_numbers = list(map(lambda x: x * 2, numbers))</span>
+										<span class="d-block text-break my-2">print(doubled_numbers) # [2, 4, 6, 8, 10]</span>
+								  </code>
+								  </div>
+								  <p>insert(): добавляет элемент на указанную позицию списка.</p>
+								  <div class="container border mb-3">
+									<code class="language-python " data-lang="python">
+										<span class="d-block text-break my-2">fruits = ["apple", "banana", "orange"]</span>
+										<span class="d-block text-break my-2">fruits.insert(1, "grape")</span>
+										<span class="d-block text-break my-2">print(fruits) # ["apple", "grape", "banana", "orange"]</span>
+								  </code>
+								  </div>
+								  <p>slice(): возвращает новый список, содержащий копию части исходного списка.</p>
+								  <div class="container border mb-3">
+									<code class="language-python " data-lang="python">
+										<span class="d-block text-break my-2">numbers = [1, 2, 3, 4, 5]</span>
+										<span class="d-block text-break my-2">sliced_numbers = numbers[1:4]</span>
+										<span class="d-block text-break my-2">print(sliced_numbers) # [2, 3, 4]</span>
+								  </code>
+								  </div>
+								  <p>extend(): добавляет элементы из другого списка в конец текущего списка.</p>
+								  <div class="container border mb-3">
+									<code class="language-python " data-lang="python">
+										<span class="d-block text-break my-2">list1 = [1, 2, 3]</span>
+										<span class="d-block text-break my-2">list2 = [4, 5, 6]</span>
+										<span class="d-block text-break my-2">list1.extend(list2)</span>
+										<span class="d-block text-break my-2">print(list1) # [1, 2, 3, 4, 5, 6]</span>
+								  </code>
+								  </div>
+								  <p>Метод for-in используется для итерации по всем элементам списка. Например, мы можем использовать этот метод для вывода каждого элемента списка в консоль:</p>
+								  <div class="container border mb-3">
+									<code class="language-python " data-lang="python">
+										<span class="d-block text-break my-2">fruits = ['apple', 'banana', 'orange']</span>
+										<span class="d-block text-break my-2">for fruit in fruits:</span>
+										<span class="d-block text-break my-2">&nbsp;print(fruit) # Output: apple banana orange</span>
+								  </code>
+								  </div>
+								  <h1 class="h4 font-weight-bold">Практические задания</h1>
+								  <p>1)	Используя метод filter() и цикл for, создайте новый список, содержащий только положительные числа из данного списка.</p>
+								  <p>2) Используя метод map(), создайте новый список, содержащий квадраты чисел из данного списка.</p>
+								  <p>3) Используя метод slice(), выведите на консоль каждую строку данного списка, написанную в обратном порядке.</p>
+								  <p>4) Написать программу, которая позволит пользователю добавлять элементы в список продуктов по их категориям. Например, если пользователь хочет добавить фрукт "Яблоко", он должен ввести категорию "Фрукты" и элемент "Яблоко", после чего программа добавит элемент в соответствующую категорию в списке продуктов. Если категория не существует, программа должна создать ее и добавить элемент в нее.</p>
+								  <div class="my-4">
+									  <details class="mt-1 border">
+										<summary class="p-2">Решение задач</summary>
+										<div class="px-2 pt-2">
+										<p>1)</p>
+										<div class="container border mb-3">
+											<code class="language-python " data-lang="python">
+												<span class="d-block text-break my-2">def positive_numbers(numbers):</span>
+												<span class="d-block text-break my-2">&nbsp;positive = []</span>
+												<span class="d-block text-break my-2">&nbsp;for num in numbers:</span>
+												<span class="d-block text-break my-2">&nbsp;&nbsp;if num > 0:</span>
+												<span class="d-block text-break my-2">&nbsp;&nbsp;&nbsp;positive.append(num)</span>
+												<span class="d-block text-break my-2">&nbsp;return positive</span>
+												<span class="d-block text-break my-2">numbers = [-2, 3, -5, 7, -8, 10]</span>
+												<span class="d-block text-break my-2">positive_numbers = positive_numbers(numbers)</span>
+												<span class="d-block text-break my-2">print(positive_numbers)  # Output: [3, 7, 10]</span>
+										  </code>
+										  </div>
+										  <p>2)</p>
+										  <div class="container border mb-3">
+											<code class="language-python " data-lang="python">
+												<span class="d-block text-break my-2">def square_numbers(numbers):</span>
+												<span class="d-block text-break my-2">&nbsp;return list(map(lambda x: x**2, numbers))</span>
+												<span class="d-block text-break my-2">numbers = [1, 2, 3, 4, 5]</span>
+												<span class="d-block text-break my-2">squared_numbers = square_numbers(numbers)</span>
+												<span class="d-block text-break my-2">print(squared_numbers)  # Output: [1, 4, 9, 16, 25]</span>
+										  </code>
+										  </div>
+										  <p>3)</p>
+										  <div class="container border mb-3">
+											<code class="language-python " data-lang="python">
+												<span class="d-block text-break my-2">fruits = ["apple", "banana", "orange", "kiwi", "strawberry"]</span>
+												<span class="d-block text-break my-2">for fruit in fruits:</span>
+												<span class="d-block text-break my-2">&nbsp;reversed_fruit = fruit[::-1]</span>
+												<span class="d-block text-break my-2">&nbsp;print(reversed_fruit)</span>
+										  </code>
+										  </div>
+										  <p>4)</p>
+										  <div class="container border mb-3">
+											<code class="language-python " data-lang="python">
+												<span class="d-block text-break my-2">products = {}</span>
+												<span class="d-block text-break my-2">def add_product(category, item):</span>
+												<span class="d-block text-break my-2">&nbsp;if category in products:</span>
+												<span class="d-block text-break my-2">&nbsp;&nbsp;products[category].insert(0, item)</span>
+												<span class="d-block text-break my-2">&nbsp;else:</span>
+												<span class="d-block text-break my-2">&nbsp;&nbsp;products[category] = [item]</span>
+												<span class="d-block text-break my-2">add_product("Фрукты", "Яблоко")</span>
+												<span class="d-block text-break my-2">add_product("Фрукты", "Груша")</span>
+												<span class="d-block text-break my-2">add_product("Овощи", "Морковь")</span>
+												<span class="d-block text-break my-2">add_product("Мясо", "Курица")</span>
+												<span class="d-block text-break my-2">print(products)</span>
+										  </code>
+										  </div>
+										</div>
+									  </details>
+									<details class="mt-1 border">
+									  <summary class="p-2">Дополнительные материалы</summary>
+									  <div class="px-2 pt-2">
+										<p><a href=https://www.learnpython.org>Учебник Python</a></p>
+									  </div>
+									</details>
+								  </div>
+								  <div class="mb-3 d-flex justify-content-center">
+									<div class="me-4">
+										<a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="pytlesson17.html"><span class="me-2">←</span><span>Предыдущий</span></a>
+									</div>
+									<a class="switchmode d-inline-block text-light text-decoration-none border rounded-0 p-1" href="pytlesson19.html"><span class="me-2">Следующий</span><span>→</span></a>
+								</div>
+								</div>
+							</div>
+						  </div>
+						</div>
+						</div>
+					  </div>
+					</div>
+			<div class="col-12 ih-100 col-lg-5 col-md-5 mb-3 mb-md-0 position-relative">
+				<div class="card mb-2 rounded-0 ih-70">
+					<div class="justify-content-center small nav nav-tabs">
+					  <div class="switchmode border-top-0 border-bottom text-light rounded-0 nav-link active">Компилятор</div>
+					</div>
+				<textarea class="form-control border-0 outline-0 h-100 text-primary" id="code-input"></textarea>
+			  <div class="d-flex p-3 border-top">
+				<div class="m-auto">
+					  <button id="compile-btn" type="button" class="btn btn-success btn-block">
+						<span class="d-none d-sm-block d-md-none d-lg-block">Выполнить</span>
+					  </button>
+					  </div>
+					</div>
+				  </div>
+				  <div class="card overflow-auto rounded-0 ih-30">
+					<div class="justify-content-center small nav nav-tabs">
+					  <div class="switchmode border-top-0 border-bottom text-light rounded-0 nav-link active">Консоль</div>
+					</div> 
+					<div class="card-body text-danger" id="output"></div>
+				  </div>
+            </div>
+
+        </div>
+    </main>
+
+	<script src="main.bundle.js"></script>
+	<script src="pytcompiler.bundle.js"></script>  
+</body>
+</html>

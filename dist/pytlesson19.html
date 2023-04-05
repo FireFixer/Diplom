@@ -136,30 +136,40 @@
 										<div class="container border mb-3">
 											<code class="language-python " data-lang="python">
 												<span class="d-block text-break my-2">class User:</span>
-												<span class="d-block text-break my-2">&nbsp;def __init__(self):</span>
-												<span class="d-block text-break my-2">&nbsp;&nbsp;self.username = ""</span>
 												<span class="d-block text-break my-2">&nbsp;def login(self, username):</span>
-												<span class="d-block text-break my-2">&nbsp;&nbsp;self.username = username</span>
-												<span class="d-block text-break my-2">&nbsp;&nbsp;print("Пользователь %s успешно вошел в систему" % self.username)</span>
+												<span class="d-block text-break my-2">&nbsp;&nbsp;print("Пользователь", username, "успешно вошел в систему")</span>
 												<span class="d-block text-break my-2">&nbsp;def logout(self):</span>
 												<span class="d-block text-break my-2">&nbsp;&nbsp;print("Пользователь успешно вышел из системы")</span>
+												<span class="d-block text-break my-2">user = User() # Создание объекта "user"</span> 
+												<span class="d-block text-break my-2">user.login("JohnDoe") # Вызов метода "login" с передачей имени пользователя</span>
+												<span class="d-block text-break my-2">user.logout() # Вызов метода "logout"</span>
 										  </code>
 										  </div>
 										  <p>2)</p>
 										  <div class="container border mb-3">
 											<code class="language-python " data-lang="python">
 												<span class="d-block text-break my-2">class Calculator:</span>
-												<span class="d-block text-break my-2">&nbsp;def add(a, b):</span>
-												<span class="d-block text-break my-2">&nbsp;&nbsp;return a + b</span>
-												<span class="d-block text-break my-2">&nbsp;def subtract(a, b):</span>
-												<span class="d-block text-break my-2">&nbsp;&nbsp;return a - b</span>
-												<span class="d-block text-break my-2">&nbsp;def multiply(a, b):</span>
-												<span class="d-block text-break my-2">&nbsp;&nbsp;return a * b</span>
-												<span class="d-block text-break my-2">&nbsp;def divide(a, b):</span>
-												<span class="d-block text-break my-2">&nbsp;&nbsp;if b == 0:</span>
-												<span class="d-block text-break my-2">&nbsp;&nbsp;&nbsp;return "Деление на ноль невозможно"</span>
+												<span class="d-block text-break my-2">&nbsp;def add(self, num1, num2):</span>
+												<span class="d-block text-break my-2">&nbsp;&nbsp;return num1 + num2</span>
+												<span class="d-block text-break my-2">&nbsp;def subtract(self, num1, num2):</span>
+												<span class="d-block text-break my-2">&nbsp;&nbsp;return num1 - num2</span>
+												<span class="d-block text-break my-2">&nbsp;def multiply(self, num1, num2):</span>
+												<span class="d-block text-break my-2">&nbsp;&nbsp;return num1 * num2</span>
+												<span class="d-block text-break my-2">&nbsp;def divide(self, num1, num2):</span>
+												<span class="d-block text-break my-2">&nbsp;&nbsp;if num2 == 0:</span>
+												<span class="d-block text-break my-2">&nbsp;&nbsp;&nbsp;print("Ошибка: деление на ноль недопустимо")</span>
+												<span class="d-block text-break my-2">&nbsp;&nbsp;&nbsp;return None</span>
 												<span class="d-block text-break my-2">&nbsp;&nbsp;else:</span>
-												<span class="d-block text-break my-2">&nbsp;&nbsp;&nbsp;return a / b</span>
+												<span class="d-block text-break my-2">&nbsp;&nbsp;&nbsp;return num1 / num2</span>
+												<span class="d-block text-break my-2">calculator = Calculator()</span>
+												<span class="d-block text-break my-2">result_add = calculator.add(5, 3)</span>
+												<span class="d-block text-break my-2">result_subtract = calculator.subtract(10, 5)</span>
+												<span class="d-block text-break my-2">result_multiply = calculator.multiply(2, 4)</span>
+												<span class="d-block text-break my-2">result_divide = calculator.divide(10, 2)</span>
+												<span class="d-block text-break my-2">print("Результат сложения:", result_add)</span>
+												<span class="d-block text-break my-2">print("Результат вычитания:", result_subtract)</span>
+												<span class="d-block text-break my-2">print("Результат умножения:", result_multiply)</span>
+												<span class="d-block text-break my-2">print("Результат деления:", result_divide)</span>
 										  </code>
 										  </div>
 										  <p>3)</p>
@@ -171,7 +181,9 @@
 												<span class="d-block text-break my-2">&nbsp;&nbsp;self.author = author</span>
 												<span class="d-block text-break my-2">&nbsp;&nbsp;self.pages = pages</span>
 												<span class="d-block text-break my-2">&nbsp;def read(self):</span>
-												<span class="d-block text-break my-2">&nbsp;&nbsp;print(f"Я читаю книгу {self.title}, написанную {self.author}, на странице {self.pages}.")</span>
+												<span class="d-block text-break my-2">&nbsp;&nbsp;print("Я читаю книгу", self.title, "написанную", self.author, "на странице", self.pages)</span>
+												<span class="d-block text-break my-2">book1 = Book("Гордость и предубеждение", "Джейн Остин", 400)</span>
+												<span class="d-block text-break my-2">book1.read()</span>
 										  </code>
 										  </div>
 										  <p>4)</p>
@@ -187,6 +199,9 @@
 												<span class="d-block text-break my-2">&nbsp;&nbsp;&nbsp;return True</span>
 												<span class="d-block text-break my-2">&nbsp;&nbsp;else:</span>
 												<span class="d-block text-break my-2">&nbsp;&nbsp;&nbsp;return False</span>
+												<span class="d-block text-break my-2">user2 = User("Alice", "alice@example.com", "password456")</span>
+												<span class="d-block text-break my-2">print("Пароль верен:", user2.validatePassword("password456"))</span>
+												<span class="d-block text-break my-2">print("Пароль верен:", user2.validatePassword("wrongpassword"))</span>
 										  </code>
 										  </div>
 										</div>
